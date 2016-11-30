@@ -1,0 +1,50 @@
+<nav class="navbar navbar-inverse navbar-fixed-top navbar fitmeets-nav-main">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle fitmeets-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_path, class: "navbar-brand" do %>
+
+           <% end %>
+
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav fitmeets-nav">
+        <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="#">Create Event</a></li>
+          <li><a href="#">Join Event</a></li>
+      </ul>
+      <ul class="nav navbar-nav fitmeets-nav navbar-right">
+
+        <% if user_signed_in? %>
+          <li class="welcome-current">Welcome, <%= current_user.email %>!</li>
+  <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+  <li><a href="#">My Profile</a></li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path  %></li>
+          <li>  <%= link_to "Login", new_user_session_path  %></li>
+        <% end %>
+
+
+  </ul>
+</div>
+
+<div class="fitmeets-flasher">
+<% if notice %>
+  <p class="alert alert-success">
+    <%= notice %>
+  </p>
+  <% elsif alert%>
+  <p class="alert alert-danger">
+    <%= alert %>
+  </p>
+  <% end %>
+</div>
+
+</nav>

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   # before_filter :configure_sign_up_params, if: :devise_controller?
   # before_filter :configure_account_update_params, if: :devise_controller?

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+$navbar-padding: 20px;
+$navbar-background: #fff;
+$navbar-border-bottom: 2px solid #F39200;
+$fitmeets-grey: #CCCCCC;
+$fitmeets-red: #9A0030;
+$navbar-font: 'Raleway', sans-serif;
+$navbar-font-weight: 400;
+$navbar-text-transform: uppercase;
+
+body { padding-top: 150px;}
+footer {margin-top: 100px;}
+table,td,th {vertical-align:middle; border:none;}
+
+th{border-bottom: 1px solid #DDD;}
+
+
+
+@mixin links($link, $visit, $hover, $active){
+ a {
+     color: $link;
+     &:visited {
+       color: $visit;
+     }
+     &:hover {
+       color: $hover;
+     }
+     &:active {
+       color: $active;
+     }
+   }
+
+}
+
+.fitmeets-flasher {
+    position: absolute;
+    right: 0px;
+}
+
+li.welcome-current {
+    margin-top: 16px;
+}
+
+.navbar-toggle.fitmeets-toggle{
+  border: 0px;
+}
+
+.navbar-toggle.fitmeets-toggle .icon-bar{
+  background-color: $fitmeets-grey;
+}
+
+.fitmeets-nav-main{
+  font-family: $navbar-font;
+  font-weight: $navbar-font-weight;
+  padding: $navbar-padding;
+  background-color: $fitmeets-red !important;
+  border-bottom: $navbar-border-bottom;
+
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    margin-top: -26px;
+}
+
+@media screen and (min-width:768px){
+  .navbar-right {
+    float: right !important;
+    margin-right: 95px;
+}
+}
+
+.navbar-nav.fitmeets-nav{
+
+  @include links($fitmeets-grey,$fitmeets-grey,$fitmeets-red,$fitmeets-red)
+
+}
+
+.fitmeets-nav .dropdown {
+    float: left !important;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+@media screen and (max-width:767px){
+  .fitmeets-nav .dropdown {
+    float: none !important;
+    margin-left:0px !important;
+    margin-top: 0px !important;
+}
+}
+
+.navbar-right .dropdown-menu {
+    right: inherit;
+    left: inherit;
+}
+
+.navbar-nav.fitmeets-nav{
+  li {
+
+    a{
+      color: $fitmeets-grey;
+      text-transform: $navbar-text-transform;
+    }
+
+    a.glyphicon:before {
+       margin-right: 3px;
+   }
+
+    a:active {
+      background-color: transparent;
+    }
+
+    a:hover{
+      color: $fitmeets-red;
+    }
+
+  }
+
+}
+
+.btn-primary {
+    color: $fitmeets-grey;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:active{
+      background-color: transparent;
+      border-color: transparent;
+
+    }
+}
+
+.dropdown-menu{
+
+  li a {
+  text-transform: $navbar-text-transform;
+}
+
+}
+
+button.btn.btn-primary.dropdown-toggle {
+    text-transform: $navbar-text-transform;
+    margin-top: -1px;
+}
+
+.btn-fitmeets:active {box-shadow: none !important}
+.btn-fitmeets:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .btn-fitmeets:active:hover, .btn-fitmeets:active:focus{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+    background-color: transparent;
+    border-color: transparent;
+    color: $fitmeets-grey;
+  }
+
+  .btn-fitmeets:active, .btn-fitmeets:focus{
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+.dropdown{ text-transform: $navbar-text-transform;}
+
+.dropdown-submenu {
+  position: relative;
+   .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+  }
+  &:hover {
+     .dropdown-menu {
+      display: block;
+    }
+     a:after {
+      border-left-color: #fff;
+    }
+  }
+  a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+  }
+  &.pull-left {
+    float: none;
+     .dropdown-menu {
+      left: -100%;
+      margin-left: 10px;
+      -webkit-border-radius: 6px 0 6px 6px;
+      -moz-border-radius: 6px 0 6px 6px;
+      border-radius: 6px 0 6px 6px;
+    }
+  }
+}
