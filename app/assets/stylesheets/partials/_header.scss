@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 $navbar-padding: 20px;
 $navbar-background: #fff;
 $navbar-border-bottom: 2px solid #F39200;
-$fitmeets-grey: #CCCCCC;
-$fitmeets-red: #9A0030;
-$navbar-font: 'Raleway', sans-serif;
+$fitmeets-grey: #fff;
+$fitmeets-black: #000000;
+$fitmeets-maroon: #b03060;
+$navbar-font: 'Poppins', sans-serif;
+$fjalla-font: 'Fjalla One', sans-serif;
 $navbar-font-weight: 400;
 $navbar-text-transform: uppercase;
 
@@ -14,6 +17,12 @@ footer {margin-top: 100px;}
 table,td,th {vertical-align:middle; border:none;}
 
 th{border-bottom: 1px solid #DDD;}
+
+a.navbar-brand img {
+    max-width: 150px;
+    position: relative;
+    top: 19px;
+}
 
 
 
@@ -54,7 +63,7 @@ li.welcome-current {
   font-family: $navbar-font;
   font-weight: $navbar-font-weight;
   padding: $navbar-padding;
-  background-color: $fitmeets-red !important;
+  background-color: $fitmeets-grey !important;
   border-bottom: $navbar-border-bottom;
 
 }
@@ -74,7 +83,7 @@ li.welcome-current {
 
 .navbar-nav.fitmeets-nav{
 
-  @include links($fitmeets-grey,$fitmeets-grey,$fitmeets-red,$fitmeets-red)
+  @include links($fitmeets-maroon,$fitmeets-maroon,$fitmeets-black !important,$fitmeets-grey)
 
 }
 
@@ -114,7 +123,7 @@ li.welcome-current {
     }
 
     a:hover{
-      color: $fitmeets-red;
+      color: $fitmeets-maroon;
     }
 
   }
@@ -213,5 +222,118 @@ button.btn.btn-primary.dropdown-toggle {
       -moz-border-radius: 6px 0 6px 6px;
       border-radius: 6px 0 6px 6px;
     }
+  }
+}
+
+.triangle {
+    border-style: solid;
+    border-width: 0 0 6rem 60rem;
+    border-color: transparent transparent #FEFEFE transparent;
+    height: 0;
+    position: absolute;
+    top: -6rem;
+    width: 0;
+}
+
+.lead {
+    color: #FEFEFE;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+header#hero-intro{
+  background-size:cover;
+  min-height:400px;
+  margin-top:-80px;
+    background: #EE6A5B url(https://d1w5usc88actyi.cloudfront.net/wp-content/uploads/2011/08/02_AdamPretty.jpg);
+}
+
+.hero-title {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding: 2rem;
+    max-width: 960px;
+    text-align: center;
+
+    h1{
+      font-family: $fjalla-font;
+      font-size: 80px !important;
+      text-transform:uppercase;
+      color: #fff !important;
+    }
+
+    p{
+    color: #1e1a1b;
+    text-transform: lowercase;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    left: 0;
+    width: 100%;
+
+    }
+}
+
+.inner-text {
+  text-align:center;
+  position: relative;
+  padding-top:120px;
+  margin: 0 auto;
+  font-size: 50px;
+  @media only screen and (min-width: 320px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media only screen and (min-width: 400px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media only screen and (min-width: 680px) {
+    font-size: 75px;
+  }
+  @media only screen and (min-width: 950px) {
+    font-size: 100px;
+  }
+}
+
+.p1 {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+color: white;
+text-shadow: 0 1px 0 #ccc,
+             0 2px 0 #c9c9c9,
+             0 3px 0 #bbb,
+             0 4px 0 #b9b9b9,
+             0 5px 0 #aaa,
+             0 6px 1px rgba(0,0,0,.1),
+             0 0 5px rgba(0,0,0,.1),
+             0 1px 3px rgba(0,0,0,.3),
+             0 3px 5px rgba(0,0,0,.2),
+             0 5px 10px rgba(0,0,0,.25),
+             0 10px 10px rgba(0,0,0,.2),
+             0 20px 20px rgba(0,0,0,.15);
+  @media only screen and (max-width: 465px) {
+    display: block;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p2 {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 100;
+  margin: 0;
+  line-height: 1;
+  color: $fitmeets-maroon;
+  @media only screen and (max-width: 465px) {
+    position: relative;
+    top: 0.6em;
   }
 }

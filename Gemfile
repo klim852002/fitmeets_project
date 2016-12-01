@@ -7,7 +7,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'react-rails'
 # gem 'devise-bootstrapped', '~> 0.1.1'
-
+gem 'react-rails-img'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 
-gem 'react-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
