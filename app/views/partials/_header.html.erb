@@ -1,6 +1,16 @@
 
 <%= react_component("Navbar", rootlink: root_path , userSignedIn: user_signed_in? , current_user: current_user, signuplink: new_user_registration_path, loginlink: new_user_session_path, logoutlink: destroy_user_session_path) %>
 
+<% if user_signed_in? %>
+  <li class="welcome-current">Welcome, <%= current_user.email %>!</li>
+<li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+<li><a href="#">My Profile</a></li>
+      <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path  %></li>
+  <li>  <%= link_to "Login", new_user_session_path  %></li>
+<% end %>
+
+
 <!-- <nav class="navbar navbar-inverse navbar-fixed-top navbar fitmeets-nav-main">
   <div class="container-fluid">
     <div class="navbar-header">
