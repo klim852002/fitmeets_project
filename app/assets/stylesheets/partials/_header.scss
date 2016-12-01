@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 $navbar-padding: 20px;
 $navbar-background: #fff;
 $navbar-border-bottom: 2px solid #F39200;
+$bungee-font:'Bungee', cursive;
+$h1-font: 30px;
+$h1-fontweight: 'light';
 $fitmeets-grey: #fff;
 $fitmeets-black: #000000;
 $fitmeets-maroon: #b03060;
@@ -18,12 +22,22 @@ table,td,th {vertical-align:middle; border:none;}
 
 th{border-bottom: 1px solid #DDD;}
 
+.maroon{
+  color: $fitmeets-maroon;
+}
 a.navbar-brand img {
     max-width: 150px;
     position: relative;
     top: 19px;
 }
 
+.section-standard h1{
+  font-family: $bungee-font;
+  font-size: $h1-font;
+  font-weight: $h1-fontweight;
+}
+
+.section-standard{padding-top:20px;}
 
 
 @mixin links($link, $visit, $hover, $active){
@@ -94,6 +108,11 @@ li.welcome-current {
 }
 
 @media screen and (max-width:767px){
+
+.navbar-toggle{
+  background-color: $fitmeets-black !important;
+}
+
   .fitmeets-nav .dropdown {
     float: none !important;
     margin-left:0px !important;
@@ -319,8 +338,9 @@ text-shadow: 0 1px 0 #ccc,
   @media only screen and (max-width: 465px) {
     display: block;
     position: absolute;
-    top: -25%;
+    top: 65%;
     left: 50%;
+    width:100%;
     transform: translateX(-50%);
   }
 }
@@ -336,4 +356,8 @@ text-shadow: 0 1px 0 #ccc,
     position: relative;
     top: 0.6em;
   }
+}
+
+.section-standard h1{
+  text-align:center;
 }
