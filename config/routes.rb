@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   #   sessions: 'users/sessions'
   # }
 
+  resources :events
+
   root 'static_pages#home'
 
 end
