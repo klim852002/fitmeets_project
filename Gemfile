@@ -7,7 +7,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'react-rails'
 # gem 'devise-bootstrapped', '~> 0.1.1'
-
+gem 'react-rails-img'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
