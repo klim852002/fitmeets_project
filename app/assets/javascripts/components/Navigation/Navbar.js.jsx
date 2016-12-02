@@ -1,9 +1,5 @@
 var Navbar = React.createClass({
-  checkSth: function() {
-    if(this.props.userSignedIn) {
-      return true;
-    }
-  },
+
 
   render: function() {
     return (
@@ -17,7 +13,7 @@ var Navbar = React.createClass({
             <span className="icon-bar"></span>
           </button>
 
-        <a href={this.props.rootlink} className="navbar-brand"></a>
+        <a href={this.props.rootlink} className="navbar-brand"><Img src="/assets/fitmeets-logo.png" /></a>
 
 
         </div>
@@ -31,8 +27,9 @@ var Navbar = React.createClass({
               <li><a href="#">Join Event</a></li>
           </ul>
 
-            { this.checkSth ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email}!</li>
-          <li><a href="#">My Profile</a></li> <li><a data-method="delete" href={this.props.logoutlink}>Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
+            { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email} !</li>
+               <li><a href={this.props.profilelink}>My Profile</a></li> <li><a href={this.props.logoutlink} data-method="delete">Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
+
 <li><a href={this.props.signuplink}>Register</a> </li>
 </ul> }
 
