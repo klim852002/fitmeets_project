@@ -32,7 +32,7 @@ var Navbar = React.createClass({
           </ul>
 
             { this.checkSth ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email}!</li>
-                      <li><a href="#">My Profile</a></li> <li><a href={this.props.logoutlink}>Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
+          <li><a href="#">My Profile</a></li> <li><a data-method="delete" href={this.props.logoutlink}>Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
 <li><a href={this.props.signuplink}>Register</a> </li>
 </ul> }
 

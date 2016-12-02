@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   #   sessions: 'users/sessions'
   # }
 
-  resources :events
+  resources :events do
+    resources :comments
+  end
 
   root 'static_pages#home'
 
