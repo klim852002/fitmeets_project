@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20161130115711) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.integer "user_id",  null: false
+    t.integer "event_id", null: false
+    t.index ["event_id"], name: "index_events_users_on_event_id"
+    t.index ["user_id"], name: "index_events_users_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -54,15 +61,6 @@ ActiveRecord::Schema.define(version: 20161130115711) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "users_events_{:id=>false}", id: false, force: :cascade do |t|
-    t.integer "users_event_id",  null: false
-    t.integer "{:id=>false}_id", null: false
-    t.integer "user_id"
-    t.integer "event_id"
-    t.index ["event_id"], name: "index_users_events_{:id=>false}_on_event_id"
-    t.index ["user_id"], name: "index_users_events_{:id=>false}_on_user_id"
   end
 
 end

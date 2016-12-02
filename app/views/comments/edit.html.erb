@@ -1,0 +1,7 @@
+<h1>edit page</h1>
+
+<%= form_for ([@event, @comment]) do |f| %>
+  <%= f.text_area :message %>
+  <%= f.submit %>
+
+<% end %>
