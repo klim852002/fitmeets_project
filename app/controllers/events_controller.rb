@@ -1,11 +1,12 @@
 class EventsController < ApplicationController
-  
+
   def index
     @events = Event.all
   end
 
   def show
     @event = Event.find(params[:id])
+    @comments = Comment.where(event_id: @event).order('created_at DESC')
   end
 
   def new
@@ -28,11 +29,6 @@ class EventsController < ApplicationController
 
 
   def update
-  end
-
-  def show
-    @event = Event.find(params[:id])
-    @comments = Comment.where(event_id: @event).order('created_at DESC')
   end
 
 

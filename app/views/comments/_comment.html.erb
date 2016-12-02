@@ -3,7 +3,7 @@
 <% render 'comments/form' %>
 
 <% @comments.each do |comment| %>
-  <p><%= comment.user.name%></p>
+  <p><%= comment.user.name %></p>
   <p><%= comment.message %></p>
   <% if current_user == comment.user%>
   <%= link_to 'Delete comment', [comment.event, comment], method: :delete %>
