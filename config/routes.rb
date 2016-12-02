@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, :only =>[:show]
+  get "/users/:id/events", to: "users#show_user_events", as:"show_user_events"
 
   root 'static_pages#home'
 
