@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 20161130115711) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "event_date"
-    t.datetime "event_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "event_address"
     t.integer  "postal_code"
     t.integer  "players_req"
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20161130115711) do
     t.string   "event_name"
     t.text     "details"
     t.string   "picture"
+    t.integer  "creator_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

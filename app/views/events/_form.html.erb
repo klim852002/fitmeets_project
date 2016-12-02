@@ -19,12 +19,17 @@
 
   <div class="field">
     <%= f.label :'Date' %>
-    <%= f.date_field :event_date %>
+    <%= f.date_select :event_date %>
   </div>
 
   <div class="field">
-    <%= f.label :'Time' %>
-    <%= f.time_field :event_time %>
+    <%= f.label :'Start Time' %>
+    <%= f.time_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'End Time' %>
+    <%= f.time_select :end_time %>
   </div>
 
   <div class="field">
@@ -34,7 +39,7 @@
 
   <div class="field">
     <%= f.label :'Postal Code' %>
-    <%= f.text_field :event_address %>
+    <%= f.text_field :postal_code %>
   </div>
 
   <div class="field">
@@ -73,11 +78,6 @@
 
   <div class="field">
     <%= f.label :'Photograph of event' %>
-    <%= f.text_area :picture %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'Property Photographs' %>
     <%= f.file_field :picture, autofocus: true %>
   </div>
 
