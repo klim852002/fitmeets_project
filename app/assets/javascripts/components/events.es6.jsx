@@ -4,7 +4,7 @@ class Events extends React.Component {
   render () {
     // debugger;
     return (
-      <div className="hold-events">
+      <div className="hold-events container">
         {this.props.events.map(function(event){
           return (
             <div key={event.id} className="paper col-md-3">

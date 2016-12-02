@@ -9,6 +9,16 @@ class UsersController < ApplicationController
 
   end
 
+  def show_user_events
+  if !current_user || !User.exists?(params[:id])
+    redirect_to root_path
+  else
+    # @recipes = Recipe.where("user_id = ?", current_user.id)
+    @user = User.find(params[:id])
+    @events = @user.events
+  end
+  end
+
 
   def home
 
