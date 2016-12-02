@@ -1,0 +1,117 @@
+$btn-text-shadow: 0px 1px 1px #888;
+$btn-font-weight: 'bold';
+$btn-font-size: 16px;
+$btn-line-height: 30px;
+$btn-border-radius: 6px;
+$btn-moz-border-radius: 6px;
+$btn-webkit-border-radius: 6px;
+$navbar-font: 'Poppins', sans-serif;
+$fitmeets-grey: #fff;
+$fitmeets-black: #000000;
+$fitmeets-maroon: #b03060;
+$btn-left-color: #CC386F;
+
+
+.standard-btn{
+border-radius: $btn-border-radius;
+-moz-border-radius: $btn-moz-border-radius;
+-webkit-border-radius: $btn-webkit-border-radius;
+font-family: $navbar-font;
+}
+
+a.standard-btn{color: #fff; text-decoration: none !important;}
+
+a.standard-btn:hover {
+  color: #fff;
+}
+
+.standard-btn span.title:hover{
+  background-color: $btn-left-color;
+}
+
+.standard-btn span.title {
+    -webkit-box-shadow: 0 3px 0 0 black;
+    box-shadow: 0 3px 0 0 black;
+    background-color: black;
+}
+
+.standard-btn span.left {
+  padding: 10px;
+    border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+}
+
+.standard-btn span.icon {
+    font-size: 23px;
+    background-color: $fitmeets-maroon;
+    -webkit-box-shadow: 0 3px 0 0 #57182F;
+    box-shadow: 0 3px 0 0 #57182F;
+    text-shadow: 0px 1px 1px #57182F;
+}
+.standard-btn span.right {
+    padding: 10px;
+    top: 4px;
+    position:relative;
+    border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    color:white;
+}
+
+
+.football{
+    background: image-url('ic-football.svg');
+    background-size: 30px 30px;
+    display: block;
+   text-indent: -9999px;
+   width: 30px;
+   height: 30px;
+   margin: 0 auto;
+   margin-top:10px;
+}
+
+.badminton{
+  background: image-url('ic-badminton.svg');
+  background-size: 30px 30px;
+  display: block;
+ text-indent: -9999px;
+ width: 30px;
+ height: 30px;
+ margin: 0 auto;
+ margin-top:10px;
+}
+
+.volleyball{
+  background: image-url('ic-volleyball.svg');
+  background-size: 30px 30px;
+  display: block;
+ text-indent: -9999px;
+ width: 30px;
+ height: 30px;
+ margin: 0 auto;
+ margin-top:10px;
+}
+
+.tennis{
+  background: image-url('ic-tennis.svg');
+  background-size: 30px 30px;
+  display: block;
+ text-indent: -9999px;
+ width: 30px;
+ height: 30px;
+ margin: 0 auto;
+ margin-top:10px;
+}
+
+.bowling{
+  background: image-url('ic-bowling.png');
+  background-size: 30px 30px;
+  display: block;
+ text-indent: -9999px;
+ width: 30px;
+ height: 30px;
+ margin: 0 auto;
+ margin-top:10px;
+
+}
