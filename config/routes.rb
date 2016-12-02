@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # }
   resources :events
 
+  resources :users, :only =>[:show]
+
   root 'static_pages#home'
 
 end

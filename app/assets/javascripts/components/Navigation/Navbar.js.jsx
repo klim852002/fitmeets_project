@@ -1,5 +1,6 @@
 var Navbar = React.createClass({
 
+
   render: function() {
     return (
 
@@ -29,7 +30,7 @@ var Navbar = React.createClass({
 
 
             { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email} !</li>
-                      <li><a href="#">My Profile</a></li> <li><a href={this.props.logoutlink} data-method="delete">Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
+               <li><a href={this.props.profilelink}>My Profile</a></li> <li><a href={this.props.logoutlink} data-method="delete">Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
 <li><a href={this.props.signuplink}>Register</a> </li>
 </ul> }
 

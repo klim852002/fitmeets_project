@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 
+
 $navbar-padding: 20px;
 $navbar-background: #fff;
 $navbar-border-bottom: 2px solid #F39200;
@@ -12,6 +13,7 @@ $fitmeets-grey: #fff;
 $fitmeets-black: #000000;
 $fitmeets-maroon: #b03060;
 $navbar-font: 'Poppins', sans-serif;
+$opensans-font: '';
 $fjalla-font: 'Fjalla One', sans-serif;
 $navbar-font-weight: 400;
 $navbar-text-transform: uppercase;
@@ -22,6 +24,55 @@ table,td,th {vertical-align:middle; border:none;}
 
 th{border-bottom: 1px solid #DDD;}
 
+
+
+.paper {
+  margin: 10vh auto;
+  min-width: 20vw;
+  max-width: 60vh;
+  min-height: 20vh;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(50, 50, 90, .1), 0 5px 15px rgba(0, 0, 0, .07);
+  transition: .6s ease;
+  background: white;
+  text-align: center;
+  margin-right:30px;
+}
+
+.paper h3 a{
+  font-family: $fjalla-font;
+  text-decoration: none;
+  color: $fitmeets-black;
+}
+
+.paper h2{
+font-size: 1rem;
+color: $fitmeets-maroon;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.paper hr{
+    width: 20%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border: 0;
+    border-bottom: 1px solid #E6E9EC;
+}
+
+.paper p{
+  padding-top:20px;
+}
+
+
+.paper img{max-width: 100%; height: auto;}
+
+.paper:hover {
+  box-shadow: 0 18px 35px rgba(50, 50, 90, .1), 0 8px 15px rgba(0, 0, 0, .07);
+  transform: translateY(-1px);
+}
 .maroon{
   color: $fitmeets-maroon;
 }
