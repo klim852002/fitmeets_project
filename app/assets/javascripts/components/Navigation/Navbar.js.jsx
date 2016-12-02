@@ -23,7 +23,7 @@ var Navbar = React.createClass({
           <ul className="nav navbar-nav fitmeets-nav">
             <li><a href="/aboutus">About Us</a></li>
               <li><a href="/events">Events</a></li>
-              <li><a href="#">Create Event</a></li>
+              <li><a href="/events/new">Create Event</a></li>
               <li><a href="#">Join Event</a></li>
           </ul>
 
