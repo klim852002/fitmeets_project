@@ -46,28 +46,30 @@
   <div class="form-group">
     <%= f.label :'Date' %>
     <div class="form-inline">
-      <%= f.select(:event_date, options_for_select(2016..2020), {}, {class: "form-control"}) %>
-      <%= f.select(:event_date, options_for_select([['Jan', 'Jan'], ['Feb', 'Feb'], ['Mar', ''], ['Apr', 'Apr'], ['May', 'May'], ['Jun', 'Jun'], ['Jul', 'Jul'], ['Aug', 'Aug'], ['Sep', 'Sep'], ['Oct', 'Oct'], ['Nov', 'Nov'], ['Dec', 'Dec']]), {}, {class: "form-control"}) %>
-      <%= f.select :event_date, (1..31).map { |i| "%02d" % i }, {}, {class: "form-control"} %>
+      <!-- <%= f.select(:event_date, options_for_select(2016..2020), {}, {class: "form-control"}) %> -->
+      <!-- <%= f.select(:event_date, options_for_select([['Jan', 'Jan'], ['Feb', 'Feb'], ['Mar', ''], ['Apr', 'Apr'], ['May', 'May'], ['Jun', 'Jun'], ['Jul', 'Jul'], ['Aug', 'Aug'], ['Sep', 'Sep'], ['Oct', 'Oct'], ['Nov', 'Nov'], ['Dec', 'Dec']]), {}, {class: "form-control"}) %> -->
+      <!-- <%= f.select :event_date, (1..31).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <%= f.date_select :event_date, class: "form-control" %>
     </div>
-    <!-- <%= f.date_select :event_date, class: "form-control" %> -->
   </div>
 
   <div class="form-group">
     <%= f.label :'Start Time'%>
     <div class="form-inline">
-      <%= f.select :start_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %>
-      <%= f.select :start_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %>
-      <%= f.select :start_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %>
+      <!-- <%= f.select :start_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :start_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :start_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
+      <%= f.time_select :start_time, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :'End Time' %>
     <div class="form-inline">
-      <%= f.select :end_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %>
-      <%= f.select :end_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %>
-      <%= f.select :end_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %>
+      <!-- <%= f.select :end_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :end_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :end_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
+      <%= f.time_select :end_time, class: "form-control" %>
     </div>
   </div>
 
