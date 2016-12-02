@@ -1,0 +1,87 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :'Event' %>
+    <%= f.text_field :event_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Date' %>
+    <%= f.date_field :event_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Time' %>
+    <%= f.time_field :event_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Location' %>
+    <%= f.text_field :event_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Postal Code' %>
+    <%= f.text_field :event_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Players Required' %>
+    <%= f.number_field :players_req %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Sports Category' %>
+    <%= radio_button_tag(:sports_cat, "Football") %>
+    <%= f.label(:sports_cat, "Football") %>
+
+    <%= radio_button_tag(:sports_cat, "Basketball") %>
+    <%= f.label(:sports_cat, "Basketball") %>
+
+    <%= radio_button_tag(:sports_cat, "Badminton") %>
+    <%= f.label(:sports_cat, "Badminton") %>
+
+    <%= radio_button_tag(:sports_cat, "Tennis") %>
+    <%= f.label(:sports_cat, "Tennis") %>
+
+    <%= radio_button_tag(:sports_cat, "Bowling") %>
+    <%= f.label(:sports_cat, "Bowling") %>
+
+    <%= radio_button_tag(:sports_cat, "Hockey") %>
+    <%= f.label(:sports_cat, "Hockey") %>
+
+    <%= radio_button_tag(:sports_cat, "Others") %>
+    <%= f.label(:sports_cat, "Others") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Details' %>
+    <%= f.text_area :details %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Photograph of event' %>
+    <%= f.text_area :picture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Property Photographs' %>
+    <%= f.file_field :picture, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
