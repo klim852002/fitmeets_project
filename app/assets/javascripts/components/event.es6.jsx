@@ -5,7 +5,7 @@ class Event extends React.Component {
       <div>
         <h2>Name: {this.props.event.event_name}</h2>
         <h2>Date: {this.props.event.event_date}</h2>
-        <h2>Start Time: {this.props.event.start_time}.{strftime("%I:%m %p")}</h2>
+        <h2>Start Time: {this.props.event.start_time}</h2>
         <h2>End Time: {this.props.event.end_time}</h2>
         <h2>Location: {this.props.event.event_address}</h2>
         <h2>Postal Code: {this.props.event.postal_code}</h2>
