@@ -27,10 +27,9 @@ var Navbar = React.createClass({
               <li><a href="#">Join Event</a></li>
           </ul>
 
-
-
             { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email} !</li>
                <li><a href={this.props.profilelink}>My Profile</a></li> <li><a href={this.props.logoutlink} data-method="delete">Log Out</a></li></ul> : <ul className="nav navbar-nav fitmeets-nav navbar-right"><li><a href={this.props.loginlink}>Log In</a></li>
+
 <li><a href={this.props.signuplink}>Register</a> </li>
 </ul> }
 
