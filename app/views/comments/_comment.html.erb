@@ -1,17 +1,25 @@
 <div class="hold-eventform-container">
 
 
-<p>This post has <%= pluralize(@comments.count, 'Comment') %></p>
-<%= pluralize(@comments.count, 'Comment')%>
 <% render 'comments/form' %>
 
 <% @comments.each do |comment| %>
-  <p><%= comment.user.name %></p>
-  <div class="commentbox"><%= comment.message %></div>
+
+  <div class="commentbox">
+    <div class="comment-avatar">
+            <img src="http://www.gravatar.com/avatar">
+          </div>
+    <%= comment.message %><br/>
+      <p>By <span class="maroon"><%= comment.user.name %></span></p>
+  </div>
+      <br/>
+
+<div class="hold-comment-buttons">
   <% if current_user == comment.user%>
   <%= link_to 'Delete comment', [comment.event, comment], method: :delete, :class => 'btn-delete-comment' %>
   <%= link_to 'Edit comment', edit_event_comment_path(comment.event, comment), :class => 'btn-edit-comment' %>
   <% end %>
+</div>
 <% end %>
 
 </div>

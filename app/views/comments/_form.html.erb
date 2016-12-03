@@ -1,6 +1,12 @@
 <section class="section-standard">
   <h1> Comments </h1>
+
+
 <div class="hold-eventform-container">
+
+  <p style="text-align:center;">Total: <%= pluralize(@comments.count, 'Comment') %></p> <br/><br/>
+  <!-- <%= pluralize(@comments.count, 'Comment')%> -->
+
 <%= form_for ([@event, @event.comments.build]) do |f| %>
   <%= f.text_area :message %>
   <%= f.submit 'Create Comment', :class => 'comment-submit' %>
