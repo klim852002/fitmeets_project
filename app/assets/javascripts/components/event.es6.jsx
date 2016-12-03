@@ -3,7 +3,6 @@ class Event extends React.Component {
 
 
   render () {
-
     return (
       <div className="hold-individual-events-container">
         <div className="col-md-5 information-eventdetails">

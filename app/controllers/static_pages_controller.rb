@@ -8,6 +8,7 @@ def home
   @events = Event.limit(4)
 
 end
+ 
 
 def set_user
     unless current_user
