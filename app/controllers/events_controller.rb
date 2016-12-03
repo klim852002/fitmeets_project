@@ -6,6 +6,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    # @event.event_date = @events.event_date.strftime("%Y:%m:%d")
+    @eventusers = Event.find(params[:id]).users
     @comments = Comment.where(event_id: @event).order('created_at DESC')
   end
 
@@ -61,6 +63,16 @@ class EventsController < ApplicationController
       format.html { redirect_to events_path, notice: 'You have successfully deleted your event' }
       format.json { head :no_content }
     end
+  end
+
+  def join
+    current_user
+    @user = current_user
+    @event = Event.find(params[:id])
+    @user.events << @event
+    # debugger
+    flash[:notice] = 'Event was saved.'
+    redirect_to event_path
   end
 
   private

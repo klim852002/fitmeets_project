@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     # @recipes = Recipe.where("user_id = ?", current_user.id)
     @user = User.find(params[:id])
     @events = Event.where(creator_id: @user)
+    @events_join = @user.events
   end
   end
 
