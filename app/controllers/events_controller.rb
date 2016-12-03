@@ -9,7 +9,6 @@ class EventsController < ApplicationController
     # @event.event_date = @events.event_date.strftime("%Y:%m:%d")
     @eventusers = Event.find(params[:id]).users
     @comments = Comment.where(event_id: @event).order('created_at DESC')
-
   end
 
   def new
