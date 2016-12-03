@@ -5,6 +5,7 @@ class Events extends React.Component {
     // debugger;
     return (
       <div className="hold-events container">
+
         {this.props.events.map(function(event){
           return (
             <div key={event.id} className="paper col-md-3">
@@ -17,9 +18,10 @@ class Events extends React.Component {
             <h5>Players needed : <span className="player-circle">{event.players_req}</span></h5>
             <p>Details : {event.details}</p>
             <a href={"/events/" + event.id} className="standard-btn">
-        <button className="draw">View Event</button>
-     </a>
-     <br/><br/><br/>
+            <button className="draw">View Event</button>
+            </a>
+
+            <br/><br/><br/>
             </div>
           )
         }

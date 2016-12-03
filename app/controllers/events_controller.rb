@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
+    # @events = Event.all
+    @events = Event.where(["sports_cat LIKE ?", "%#{params[:search]}%"])
+    @events = Event.where(["event_name LIKE ?", "%#{params[:search]}%"])
+    @events = Event.where(["details LIKE ?", "%#{params[:search]}%"])
   end
 
   def show
