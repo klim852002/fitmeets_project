@@ -1,8 +1,7 @@
-<%= form_for(event) do |f| %>
+<%= form_for @event do |f| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
       <ul>
       <% event.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,78 +9,80 @@
       </ul>
     </div>
   <% end %>
-
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :'Event' %>
-    <%= f.text_field :event_name %>
+    <%= f.text_field :event_name, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= f.label :'Date' %>
-    <%= f.date_select :event_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'Start Time' %>
-    <%= f.time_select :start_time %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'End Time' %>
-    <%= f.time_select :end_time %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'Location' %>
-    <%= f.text_field :event_address %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'Postal Code' %>
-    <%= f.text_field :postal_code %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'Players Required' %>
-    <%= f.number_field :players_req %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :'Sports Category' %>
-    <%= radio_button_tag(:sports_cat, "Football") %>
-    <%= f.label(:sports_cat, "Football") %>
-
-    <%= radio_button_tag(:sports_cat, "Basketball") %>
-    <%= f.label(:sports_cat, "Basketball") %>
-
-    <%= radio_button_tag(:sports_cat, "Badminton") %>
-    <%= f.label(:sports_cat, "Badminton") %>
-
-    <%= radio_button_tag(:sports_cat, "Tennis") %>
-    <%= f.label(:sports_cat, "Tennis") %>
-
-    <%= radio_button_tag(:sports_cat, "Bowling") %>
-    <%= f.label(:sports_cat, "Bowling") %>
-
-    <%= radio_button_tag(:sports_cat, "Hockey") %>
-    <%= f.label(:sports_cat, "Hockey") %>
-
-    <%= radio_button_tag(:sports_cat, "Others") %>
-    <%= f.label(:sports_cat, "Others") %>
+    <div class="form-inline">
+      <%= f.select(:sports_cat, options_for_select([['Football', 'Football'], ['Basketball', 'Basketball'], ['Badminton', 'Badminton'], ['Tennis', 'Tennis'], ['Bowling', 'Bowling'], ['Hockey', 'Hockey'], ['Others', 'Others']]), {}, {class: "form-control"}) %>
+    </div>
+    <!-- <%= radio_button_tag(:sports_cat, "Football") %>
+    <%= f.label(:sports_cat, "Football") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Basketball") %>
+    <%= f.label(:sports_cat, "Basketball") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Badminton") %>
+    <%= f.label(:sports_cat, "Badminton") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Tennis") %>
+    <%= f.label(:sports_cat, "Tennis") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Bowling") %>
+    <%= f.label(:sports_cat, "Bowling") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Hockey") %>
+    <%= f.label(:sports_cat, "Hockey") %> -->
+    <!-- <%= radio_button_tag(:sports_cat, "Others") %>
+    <%= f.label(:sports_cat, "Others") %> -->
   </div>
-
-  <div class="field">
+  <div class="form-group">
+    <%= f.label :'Date' %>
+    <div class="form-inline">
+      <!-- <%= f.select(:event_date, options_for_select(2016..2020), {}, {class: "form-control"}) %> -->
+      <!-- <%= f.select(:event_date, options_for_select([['Jan', 'Jan'], ['Feb', 'Feb'], ['Mar', ''], ['Apr', 'Apr'], ['May', 'May'], ['Jun', 'Jun'], ['Jul', 'Jul'], ['Aug', 'Aug'], ['Sep', 'Sep'], ['Oct', 'Oct'], ['Nov', 'Nov'], ['Dec', 'Dec']]), {}, {class: "form-control"}) %> -->
+      <!-- <%= f.select :event_date, (1..31).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <%= f.date_select :event_date, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :'Start Time'%>
+    <div class="form-inline">
+      <!-- <%= f.select :start_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :start_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :start_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
+      <%= f.time_select :start_time, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :'End Time' %>
+    <div class="form-inline">
+      <!-- <%= f.select :end_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :end_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+      <!-- <%= f.select :end_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
+      <%= f.time_select :end_time, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :'Location' %>
+    <%= f.text_field :event_address, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :'Postal Code' %>
+    <%= f.text_field :postal_code, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :'Players Required' %>
+    <div class="form-inline">
+      <%= f.number_field :players_req, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
     <%= f.label :'Details' %>
-    <%= f.text_area :details %>
+    <%= f.text_area :details, class: "form-control", rows: "3" %>
   </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :'Photograph of event' %>
     <%= f.file_field :picture, autofocus: true %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <%= f.submit "Add Event", class: "btn btn-primary" %>
   </div>
 <% end %>

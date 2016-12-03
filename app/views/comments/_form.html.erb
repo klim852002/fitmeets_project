@@ -1,0 +1,12 @@
+<section class="section-standard">
+  <h1> Comments </h1>
+<div class="hold-eventform-container">
+<%= form_for ([@event, @event.comments.build]) do |f| %>
+  <%= f.text_area :message %>
+  <%= f.submit 'Create Comment', :class => 'comment-submit' %>
+
+<% end %>
+
+</div>
+
+</section>

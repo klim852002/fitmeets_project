@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+
   def index
     @events = Event.all
   end
@@ -7,6 +8,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     # @event.event_date = @events.event_date.strftime("%Y:%m:%d")
     @eventusers = Event.find(params[:id]).users
+    @comments = Comment.where(event_id: @event).order('created_at DESC')
+
   end
 
   def new
@@ -14,7 +17,10 @@ class EventsController < ApplicationController
   end
 
   def create
+
     current_user
+    # @event = Event.new(event_param)
+
     @event = Event.new(event_params)
     @event.creator_id = current_user.id
 
@@ -28,6 +34,11 @@ class EventsController < ApplicationController
       end
     end
   end
+
+
+  def update
+  end
+
 
   def edit
     @event = Event.find(params[:id])

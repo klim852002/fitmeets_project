@@ -1,4 +1,9 @@
+<%= render 'partials/herointro' %>
+
+<br/><Br/>
+
 <%= react_component 'Event', {event: @event} %>
+
 
 <h2><%= link_to 'Back', events_path %></h2>
 
@@ -16,3 +21,11 @@
       </li>
   </ul>
 <%end%>
+
+<div style='clear:both;'></div>
+
+<hr/>
+
+<%= render 'comments/form' %>
+
+<%= render 'comments/comment' %>

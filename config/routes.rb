@@ -11,9 +11,14 @@ Rails.application.routes.draw do
   # devise_for :users, controllers: {
   #   sessions: 'users/sessions'
   # }
-  resources :events
+
+
+  resources :events do
+    resources :comments
+  end
 
   resources :users, :only =>[:show]
+  get "/users/:id/events", to: "users#show_user_events", as:"show_user_events"
 
 
   post '/events/:id/join', to: 'events#join', as: 'join_event'
