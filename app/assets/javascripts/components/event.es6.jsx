@@ -1,6 +1,5 @@
 class Event extends React.Component {
   render () {
-
     return (
       <div>
         <h2>Name: {this.props.event.event_name}</h2>

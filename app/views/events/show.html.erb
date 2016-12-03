@@ -1,1 +1,18 @@
 <%= react_component 'Event', {event: @event} %>
+
+<h2><%= link_to 'Back', events_path %></h2>
+
+<h2><%= link_to "Join", join_event_path, method: :post %></h2>
+<!-- equivalent to -->
+<!-- link_to "Join", { controller: "events", action: :join }, method: :post -->
+<h3>These players have joined!</h3>
+<% @eventusers.each do |eventuser| %>
+  <ul>
+      <li>
+          <a href="#"><%= eventuser.name %></a><br>
+          <%= eventuser.email %><br>
+          <%= eventuser.contact_number %><br>
+          <hr>
+      </li>
+  </ul>
+<%end%>

@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
   resources :users, :only =>[:show]
 
+
+  post '/events/:id/join', to: 'events#join', as: 'join_event'
+
   root 'static_pages#home'
 
 end
