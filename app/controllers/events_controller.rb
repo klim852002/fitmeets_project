@@ -22,7 +22,6 @@ class EventsController < ApplicationController
 
     current_user
     # @event = Event.new(event_param)
-
     @event = Event.new(event_params)
     @event.creator_id = current_user.id
 
@@ -36,11 +35,6 @@ class EventsController < ApplicationController
       end
     end
   end
-
-
-  def update
-  end
-
 
   def edit
     @event = Event.find(params[:id])

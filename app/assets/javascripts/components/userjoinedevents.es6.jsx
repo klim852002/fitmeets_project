@@ -1,11 +1,11 @@
-class UserEvents extends React.Component {
+class UserJoinedEvents extends React.Component {
 
 
   render () {
     // debugger;
     return (
       <div className="hold-events container">
-        {this.props.events.map(function(event){
+        {this.props.events_join.map(function(event){
           return (
             <div key={event.id} className="paper col-md-3">
             <img src={event.picture}/>
@@ -27,7 +27,7 @@ class UserEvents extends React.Component {
         }
         )}
       </div>
-      
+
     )
   }
 }
