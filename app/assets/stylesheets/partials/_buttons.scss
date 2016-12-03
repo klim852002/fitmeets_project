@@ -8,14 +8,11 @@ $btn-webkit-border-radius: 6px;
 $navbar-font: 'Poppins', sans-serif;
 $fitmeets-grey: #fff;
 $fitmeets-black: #000000;
-$fitmeets-maroon: #b03060;
-$btn-left-color: #CC386F;
+$fitmeets-maroon: #800000;
+$btn-left-color: #9e3737;
 
 
 .standard-btn{
-border-radius: $btn-border-radius;
--moz-border-radius: $btn-moz-border-radius;
--webkit-border-radius: $btn-webkit-border-radius;
 font-family: $navbar-font;
 }
 
@@ -26,39 +23,22 @@ a.standard-btn:hover {
 }
 
 .standard-btn span.title:hover{
-  background-color: $btn-left-color;
+  color:#ffffff;
+    border: 4px solid white;
 }
 
 .standard-btn span.title {
-    -webkit-box-shadow: 0 3px 0 0 black;
-    box-shadow: 0 3px 0 0 black;
-    background-color: black;
+    background:rgba(0,0,0,0.7);
+    border: 4px solid $fitmeets-maroon;
 }
 
 .standard-btn span.left {
   padding: 10px;
-    border-radius: 6px 0 0 6px;
-    -moz-border-radius: 6px 0 0 6px;
-    -webkit-border-radius: 6px 0 0 6px;
 }
 
-.standard-btn span.icon {
-    font-size: 23px;
-    background-color: $fitmeets-maroon;
-    -webkit-box-shadow: 0 3px 0 0 #57182F;
-    box-shadow: 0 3px 0 0 #57182F;
-    text-shadow: 0px 1px 1px #57182F;
+.col-md-5.information-eventdetails .football, .col-md-5.information-eventdetails .badminton, .col-md-5.information-eventdetails .volleyball, .col-md-5.information-eventdetails .tennis, .col-md-5.information-eventdetails .bowling {
+    display: inline-block;
 }
-.standard-btn span.right {
-    padding: 10px;
-    top: 4px;
-    position:relative;
-    border-radius: 0 6px 6px 0;
-    -moz-border-radius: 0 6px 6px 0;
-    -webkit-border-radius: 0 6px 6px 0;
-    color:white;
-}
-
 
 .football{
     background: image-url('ic-football.svg');

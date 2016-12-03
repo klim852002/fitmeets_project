@@ -10,8 +10,7 @@ class FeaturedEvents extends React.Component {
             <div key={event.id} className="block">
               <img src={event.picture} alt=""/>
               <a href={"/events/" + event.id} className="standard-btn">
-         <span className="left title">View Event</span>
-         <span className="right icon fa fa-eye"></span>
+        <button className="draw">View Event</button>
        </a>
               <div className="info">
                 <div className="title">{event.event_name}</div>

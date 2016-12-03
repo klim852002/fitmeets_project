@@ -1,4 +1,4 @@
-class Events extends React.Component {
+class UserEvents extends React.Component {
 
 
   render () {
@@ -17,8 +17,10 @@ class Events extends React.Component {
             <h5>Players needed : <span className="player-circle">{event.players_req}</span></h5>
             <p>Details : {event.details}</p>
             <a href={"/events/" + event.id} className="standard-btn">
-        <button className="draw">View Event</button>
+      <button className="draw">View Event</button>
      </a>
+
+
      <br/><br/><br/>
             </div>
           )

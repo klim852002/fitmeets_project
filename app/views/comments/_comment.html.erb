@@ -1,12 +1,17 @@
-<h2>This post has <%= pluralize(@comments.count, 'Comment') %></h2>
+<div class="hold-eventform-container">
+
+
+<p>This post has <%= pluralize(@comments.count, 'Comment') %></p>
 <%= pluralize(@comments.count, 'Comment')%>
 <% render 'comments/form' %>
 
 <% @comments.each do |comment| %>
   <p><%= comment.user.name %></p>
-  <p><%= comment.message %></p>
+  <div class="commentbox"><%= comment.message %></div>
   <% if current_user == comment.user%>
-  <%= link_to 'Delete comment', [comment.event, comment], method: :delete %>
-  <%= link_to 'Edit comment', edit_event_comment_path(comment.event, comment)%>
+  <%= link_to 'Delete comment', [comment.event, comment], method: :delete, :class => 'btn-delete-comment' %>
+  <%= link_to 'Edit comment', edit_event_comment_path(comment.event, comment), :class => 'btn-edit-comment' %>
   <% end %>
 <% end %>
+
+</div>
