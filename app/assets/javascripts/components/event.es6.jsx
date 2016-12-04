@@ -22,8 +22,10 @@ class Event extends React.Component {
       <div className="col-md-7 information-eventimage">
           <img src={this.props.event.picture}/>
           <p className="players-required">Players required: {this.props.event.players_req}</p>
-          <button className="draw">Join Event</button>
+          <a href={this.props.event.id + "/join"} data-method="post"><button className="draw">Join Event</button></a>
       </div>
+
+
 
       </div>
     )
