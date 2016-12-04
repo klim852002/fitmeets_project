@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #   sessions: 'users/sessions'
   # }
 
-
+  # nested routes comment can only be created when a event is created
   resources :events do
     resources :comments
   end
