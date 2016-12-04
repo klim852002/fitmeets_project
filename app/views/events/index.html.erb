@@ -1,15 +1,21 @@
   <section id="all-events" class="section-standard">
     <h1> <span class="maroon">Events</span> Available </h1>
 
-    <div class="container">
-      <%= form_tag events_path, :method => 'get', class: "navbar-form navbar-left search-form" do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-        <%= submit_tag "Search"%>
+    <div class="search-container">
+      <%= form_tag events_path, :method => 'get', class: "search-form search-wrapper" do %>
+
+        <%= text_field_tag :search, params[:search], placeholder: "Search By Event Name", class: "form-control" %>
+        <%= submit_tag "Search", class: "font-awesome-search" %>
       <% end %>
 
     </div>
 
+<br/><br/>
 
   <%= react_component 'Events', { events: @events } %>
+
+  <h1> Events by calendar view </h1>
+
+
 
 </section>
