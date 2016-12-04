@@ -64,10 +64,15 @@ class EventsController < ApplicationController
     current_user
     @user = current_user
     @event = Event.find(params[:id])
-    @user.events << @event
-    # debugger
-    flash[:notice] = 'Event was saved.'
-    redirect_to event_path
+    # if @user.events.includes(:events).where('id') != @event
+      # if Post.includes(:author).where(..)
+      @user.events << @event
+      # debugger
+      flash[:notice] = 'Event was saved.'
+      redirect_to event_path
+    # else
+    #   redirect_to event_path, :alert => "Opps, you have already joined this event..."
+    # end
   end
 
   private
