@@ -16,9 +16,16 @@ class UserEvents extends React.Component {
             <h5>Location : {event.event_address}</h5>
             <h5>Players needed : <span className="player-circle">{event.players_req}</span></h5>
             <p>Details : {event.details}</p>
+
             <a href={"/events/" + event.id} className="standard-btn">
       <button className="draw">View Event</button>
      </a>
+     <a href={"/events/" + event.id + "/edit"} className="standard-btn">
+       <button className="draw">Edit</button>
+       </a>
+      <a href={"/events/" + event.id} data-method="delete" className="standard-btn">
+     <button className="draw">Delete</button></a>
+
 
 
      <br/><br/><br/>
@@ -27,7 +34,7 @@ class UserEvents extends React.Component {
         }
         )}
       </div>
-      
+
     )
   }
 }
