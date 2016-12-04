@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_and_belongs_to_many :events
+  has_and_belongs_to_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50, message: "Maximum of 50 letters" }, format: { with: /\A[a-zA-Z]+\z/, message: "Letters only" }
