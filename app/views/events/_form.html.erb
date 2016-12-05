@@ -18,28 +18,17 @@
     <div class="form-inline">
       <%= f.select(:sports_cat, options_for_select([['Football', 'Football'], ['Basketball', 'Basketball'], ['Badminton', 'Badminton'], ['Tennis', 'Tennis'], ['Bowling', 'Bowling'], ['Hockey', 'Hockey'], ['Others', 'Others']]), {}, {class: "form-control"}) %>
     </div>
-    <!-- <%= radio_button_tag(:sports_cat, "Football") %>
-    <%= f.label(:sports_cat, "Football") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Basketball") %>
-    <%= f.label(:sports_cat, "Basketball") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Badminton") %>
-    <%= f.label(:sports_cat, "Badminton") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Tennis") %>
-    <%= f.label(:sports_cat, "Tennis") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Bowling") %>
-    <%= f.label(:sports_cat, "Bowling") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Hockey") %>
-    <%= f.label(:sports_cat, "Hockey") %> -->
-    <!-- <%= radio_button_tag(:sports_cat, "Others") %>
-    <%= f.label(:sports_cat, "Others") %> -->
   </div>
   <div class="form-group">
     <%= f.label :'Date' %>
-    <div class="form-inline">
+    <div class="input-group date">
       <!-- <%= f.select(:event_date, options_for_select(2016..2020), {}, {class: "form-control"}) %> -->
       <!-- <%= f.select(:event_date, options_for_select([['Jan', 'Jan'], ['Feb', 'Feb'], ['Mar', ''], ['Apr', 'Apr'], ['May', 'May'], ['Jun', 'Jun'], ['Jul', 'Jul'], ['Aug', 'Aug'], ['Sep', 'Sep'], ['Oct', 'Oct'], ['Nov', 'Nov'], ['Dec', 'Dec']]), {}, {class: "form-control"}) %> -->
       <!-- <%= f.select :event_date, (1..31).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
-      <%= f.date_select :event_date, class: "form-control" %>
+      <%= f.text_field :event_date, class: "form-control datepicker" %>
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
     </div>
   </div>
   <div class="form-group">
