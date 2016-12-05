@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
   before_action :configure_sign_up_params, if: :devise_controller?
   before_action :configure_account_update_params, if: :devise_controller?
 
+  def path_for(profilelink)
+    current_user == current.user ? user_path(current_user.id) : image_path(image)
+  end
+
+
   protected
 
     def configure_sign_up_params
