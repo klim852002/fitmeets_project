@@ -7,7 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    # @event.event_date = @events.event_date.strftime("%Y:%m:%d")
+    # @event.event_date = @events.event_date.strftime("%d/%m/%Y")
     @eventusers = Event.find(params[:id]).users
     @comments = Comment.where(event_id: @event).order('created_at DESC')
   end

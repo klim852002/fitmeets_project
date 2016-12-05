@@ -12,9 +12,11 @@
 //
 //= require bootstrap.min
 //= require jquery
+//= require datepicker
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-datepicker
 //= require react
 //= require react_ujs
 //= require react_rails_img
