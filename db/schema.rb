@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20161130115711) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "event_date"
+    t.string   "event_date"
     t.datetime "start_time"
     t.datetime "end_time"
     t.string   "event_address"
