@@ -10,17 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
+//= require bootstrap.min
 //= require jquery
-//= require jquery_ujs
-//= require react
-//= require react_ujs
-//= require components
 //= require datepicker
 //= require bootstrap-sprockets
+//= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-datepicker
+//= require react
+//= require react_ujs
 //= require react_rails_img
 //= require typed.min
 //= require TweenMax.min
+//= require components
 //= require_tree .
