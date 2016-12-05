@@ -70,9 +70,9 @@ class EventsController < ApplicationController
     # if Post.includes(:author).where(..)
     # User.joins(:events).where("@user.events ")
     # user3.events.where(id: '4')
-    if @user.events.where(id: @event).exists?
+    if @user.events.where(id: @event).exists? || @event.users.size >= @event.players_req
       # debugger
-      flash[:notice] = 'Opps, you have already joined this event...'
+      flash[:notice] = 'Opps, you cannot join this event now'
       redirect_to event_path
     else
       @user.events << @event

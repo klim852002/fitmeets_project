@@ -8,7 +8,7 @@ class FeaturedEvents extends React.Component {
         {this.props.events.map(function(event){
           return (
             <div key={event.id} className="block">
-              <img src={event.picture} alt=""/>
+              <img src={event.picture.url} alt=""/>
               <a href={"/events/" + event.id} className="standard-btn">
         <button className="draw">View Event</button>
        </a>
