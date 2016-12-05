@@ -1,7 +1,5 @@
 class Event extends React.Component {
 
-
-
   render () {
     return (
       <div className="hold-individual-events-container">
@@ -18,6 +16,8 @@ class Event extends React.Component {
         <p><i className="fa fa-map-marker maroon"></i> {this.props.event.event_address}</p>
         <p>Postal Code: {this.props.event.postal_code}</p>
 
+      
+
       </div>
       <div className="col-md-7 information-eventimage">
           <img src={this.props.event.picture}/>
@@ -30,4 +30,6 @@ class Event extends React.Component {
       </div>
     )
   }
+
+
 }

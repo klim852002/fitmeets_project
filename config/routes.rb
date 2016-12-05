@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get '/aboutus', to: 'static_pages#aboutus'
+
 end

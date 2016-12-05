@@ -2,9 +2,9 @@
     <h1> <span class="maroon">Events</span> Available </h1>
 
     <div class="container">
-      <%= form_tag events_path, :method => 'get', class: "navbar-form navbar-left search-form" do %>
+      <%= form_tag events_path, :method => 'get', class: "search-form search-wrapper" do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-        <%= submit_tag "Search"%>
+        <button><%= submit_tag "Search" %><i class="fa fa-search"></i></button>
       <% end %>
 
     </div>

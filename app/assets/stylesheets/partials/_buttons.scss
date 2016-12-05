@@ -95,3 +95,14 @@ a.standard-btn:hover {
  margin-top:10px;
 
 }
+
+a.standard-btn-withicon {
+    color: black;
+    margin-right: 9px;
+    text-decoration: none;
+}
+
+a.standard-btn-withicon:hover{
+  text-decoration: none;
+  color: $fitmeets-maroon;
+}

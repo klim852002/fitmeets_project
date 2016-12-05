@@ -21,4 +21,5 @@
 //= require typed.min
 //= require TweenMax.min
 //= require components
+//= require jquery.sticky-kit.min
 //= require_tree .

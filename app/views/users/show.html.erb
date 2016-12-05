@@ -1,2 +1,12 @@
+<section class="section-standard">
 
+  <h1> My <span class="maroon">Profile</span> </h1>
 <p>Email:<%= @user.email %></p>
+
+
+
+  <%=link_to "Edit Profile", edit_user_registration_path, class: "edit-profile-btn" %> <br/>
+Number of events organised: <%= @events.count %> <Br/>
+
+Number of events joined: <%= @events_join.count %>
+</section>

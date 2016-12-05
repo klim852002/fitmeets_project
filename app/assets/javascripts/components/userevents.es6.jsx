@@ -19,12 +19,12 @@ class UserEvents extends React.Component {
 
             <a href={"/events/" + event.id} className="standard-btn">
       <button className="draw">View Event</button>
-     </a>
-     <a href={"/events/" + event.id + "/edit"} className="standard-btn">
-       <button className="btm-edit">Edit</button>
+    </a> <br/><br/>
+     <a href={"/events/" + event.id + "/edit"} className="standard-btn-withicon">
+      Edit  <i className="fa fa-pencil-square-o"></i>
        </a>
-      <a href={"/events/" + event.id} data-method="delete" className="standard-btn">
-     <button className="draw">Delete</button></a>
+      <a href={"/events/" + event.id} data-method="delete" className="standard-btn-withicon">
+     Delete <i className="fa fa-trash-o"></i> </a>
 
 
 
