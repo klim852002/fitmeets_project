@@ -21,7 +21,7 @@ class UserEvents extends React.Component {
       <button className="draw">View Event</button>
      </a>
      <a href={"/events/" + event.id + "/edit"} className="standard-btn">
-       <button className="draw">Edit</button>
+       <button className="btm-edit">Edit</button>
        </a>
       <a href={"/events/" + event.id} data-method="delete" className="standard-btn">
      <button className="draw">Delete</button></a>

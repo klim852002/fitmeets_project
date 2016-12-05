@@ -20,11 +20,13 @@ class EventsController < ApplicationController
 
     current_user
     # @event = Event.new(event_param)
-    @event = Event.new(event_params)
+    @event = current_user.events.new(event_params)
     @event.creator_id = current_user.id
 
     respond_to do |format|
       if @event.save
+
+        CreateMailer.event_created(current_user).deliver
         format.html { redirect_to @event, notice: 'You have added a new event.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -74,6 +76,7 @@ class EventsController < ApplicationController
       redirect_to event_path
     else
       @user.events << @event
+      JoinMailer.join_event(current_user, @event).deliver
       flash[:notice] = 'You have joined the event.'
       redirect_to event_path
     end

@@ -1,5 +1,11 @@
 
-<%= react_component("Navbar", rootlink: root_path , userSignedIn: user_signed_in? , current_user: current_user, signuplink: new_user_registration_path, loginlink: new_user_session_path, logoutlink: destroy_user_session_path, profilelink: user_path(current_user.id)) %>
+
+<%= react_component("Navbar", rootlink: root_path , userSignedIn: user_signed_in? , current_user: current_user, signuplink: new_user_registration_path, loginlink: new_user_session_path, logoutlink: destroy_user_session_path, profilelink: current_user) %>
+
+<!-- <%= react_component("Navbar", rootlink: root_path , userSignedIn: user_signed_in? , current_user: current_user, signuplink: new_user_registration_path, loginlink: new_user_session_path, logoutlink: destroy_user_session_path) %> -->
+
+<!-- profilelink: user_path(current_user.id) -->
+
 
 <!-- <% if user_signed_in? %>
   <li class="welcome-current">Welcome, <%= current_user.email %>!</li>
