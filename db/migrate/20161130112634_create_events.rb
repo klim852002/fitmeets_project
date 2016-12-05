@@ -2,8 +2,8 @@ class CreateEvents < ActiveRecord::Migration[5.0]
   def change
     create_table :events do |t|
       t.string :event_date
-      t.timestamp :start_time
-      t.timestamp :end_time
+      t.string :start_time
+      t.string :end_time
       t.string :event_address
       t.integer :postal_code
       t.integer :players_req

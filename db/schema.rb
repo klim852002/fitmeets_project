@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20161130115711) do
 
   create_table "events", force: :cascade do |t|
     t.string   "event_date"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.string   "start_time"
+    t.string   "end_time"
     t.string   "event_address"
     t.integer  "postal_code"
     t.integer  "players_req"

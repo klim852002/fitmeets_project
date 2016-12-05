@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    $('#timepicker').timepicker();
+    $('#timepicker1').timepicker();
+    $('#timepicker2').timepicker();
 });
