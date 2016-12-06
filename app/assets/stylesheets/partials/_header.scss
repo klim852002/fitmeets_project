@@ -51,12 +51,21 @@ i.icon-chevron-down:before {
   border-top: 4px solid $fitmeets-maroon;
 }
 
+
+
+
 .hold-events.container {
     padding-left: 0px;
     padding-right: 0px;
     margin: 0 auto;
     text-align: center;
+    max-width: 1024px;
 }
+
+i.fa.fa-calendar.maroon {
+    padding-right: 7px;
+}
+
 
 .paper h3 a{
   font-family: $fjalla-font;
@@ -205,6 +214,15 @@ li.welcome-current {
     float: right !important;
     margin-right: 95px;
 }
+
+@media screen and (min-width:992px){
+  .paper.col-md-4 {
+    width: 31.333333%;
+}
+}
+
+
+
 }
 
 .navbar-nav.fitmeets-nav li a:hover {
@@ -440,6 +458,8 @@ header#hero-intro{
   @media only screen and (min-width: 950px) {
     font-size: 100px;
   }
+
+
 }
 
 .p1 {
@@ -899,11 +919,13 @@ section.section-standard.aboutuspage {
 }
 
 aside {
-  width: 315px;
-  padding: 29px 30px 0;
-  text-align: center;
-  float: left;
+    width: 315px;
+    padding: 29px 30px 0;
+    text-align: center;
+    float: left;
+    min-height: 1100px;
 }
+
 aside .profile-image {
   margin-bottom: 27px;
   -moz-border-radius: 50%;
@@ -1041,11 +1063,23 @@ span.title-right a:hover{
 .content article:last-child {
   border: none;
 }
+
+.hold-buttons{
+  margin-left: 5px;
+}
+
+.hold-buttons a{
+  color: $fitmeets-maroon;
+}
+
+
 .content article .thumbnail {
   width: 180px;
   height: auto;
   float: left;
   border:0px;
+  min-height: 120px;
+  margin-bottom: 5px;
 }
 .content article .post {
   margin-left: 0px;
@@ -1117,7 +1151,13 @@ span.title-right a:hover{
   margin-bottom: 8px;
   display: inline-block;
   margin-top:0px;
+  margin-left: 5px;
 }
+
+.content article .post button.draw {
+    margin-left: 6px;
+}
+
 .content article .post .post-about h3:hover {
   border-bottom: 2px solid #1a1a1a;
   margin-bottom: 6px;
@@ -1159,6 +1199,16 @@ span.photo_tennis {
     padding-top: 66.64%;
 }
 
+.thumbprofile_tennis{
+  background-image: image-url('tennis-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
+}
+
 span.photo_football{
     display: block;
     background-image: image-url('football-photo.jpg');
@@ -1168,6 +1218,16 @@ span.photo_football{
     height: 0;
     clear: both;
     padding-top: 66.64%;
+}
+
+.thumbprofile_football{
+  background-image: image-url('football-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
 }
 
 span.photo_bowling{
@@ -1181,6 +1241,16 @@ span.photo_bowling{
     padding-top: 66.64%;
 }
 
+.thumbprofile_bowling{
+  background-image: image-url('bowling-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
+}
+
 span.photo_hockey{
     display: block;
     background-image: image-url('hockey-photo.jpg');
@@ -1190,6 +1260,16 @@ span.photo_hockey{
     height: 0;
     clear: both;
     padding-top: 66.64%;
+}
+
+.thumbprofile_hockey{
+  background-image: image-url('hockey-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
 }
 
 span.photo_badminton{
@@ -1203,6 +1283,16 @@ span.photo_badminton{
     padding-top: 66.64%;
 }
 
+.thumbprofile_badminton{
+  background-image: image-url('badminton-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
+}
+
 span.photo_basketball{
     display: block;
     background-image: image-url('basketball-photo.jpg');
@@ -1212,6 +1302,16 @@ span.photo_basketball{
     height: 0;
     clear: both;
     padding-top: 66.64%;
+}
+
+.thumbprofile_basketball{
+  background-image: image-url('basketball-photo.jpeg');
+  background-size: cover;
+display: block;
+height: 120px !important;
+border-radius: 0px !important;
+padding: 0px !important;
+
 }
 
 

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "/users/:id/events", to: "users#show_user_events", as:"show_user_events"
 
 
+
   post '/events/:id/join', to: 'events#join', as: 'join_event'
 
   root 'static_pages#home'
