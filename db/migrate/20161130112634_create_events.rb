@@ -12,6 +12,8 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.text :details
       t.string :picture
       t.integer :creator_id
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

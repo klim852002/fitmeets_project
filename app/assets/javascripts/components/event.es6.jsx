@@ -18,10 +18,11 @@ class Event extends React.Component {
 
       </div>
       <div className="col-md-7 information-eventimage">
-      { this.props.event.picture.url ?  <img src={this.props.event.picture.url}/> : <span className={`"photo"+ ${this.props.event.sports_cat.toLowerCase()}`}></span>}
+      { this.props.event.picture.url ?  <img src={this.props.event.picture.url}/> : <span className={`photo_${this.props.event.sports_cat.toLowerCase()}`}></span>}
 
           <p className="players-required">{this.props.event.players_req - this.props.eventusers.length} more players required</p>
           <a href={this.props.event.id + "/join"} data-method="post"><button className="draw">Join Event</button></a>
+          <button id="mapBtn" type="button" className="draw" data-toggle="modal" data-target="#eventMap">See Map</button>
       </div>
 
 

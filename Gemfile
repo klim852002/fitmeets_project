@@ -23,6 +23,10 @@ gem "font-awesome-rails"
 
 gem 'awesome_rails_console'
 
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

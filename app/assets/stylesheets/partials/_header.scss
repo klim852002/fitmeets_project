@@ -25,6 +25,18 @@ th{border-bottom: 1px solid #DDD;}
 
 
 
+i.icon-chevron-up:before {
+  content: "\e113";
+  font-family: 'Glyphicons Halflings';
+  font-style: initial;
+}
+
+i.icon-chevron-down:before {
+  content: "\e114";
+  font-family: 'Glyphicons Halflings';
+  font-style: initial;
+}
+
 .paper {
   margin: 10vh auto;
   height: auto;
@@ -1135,3 +1147,81 @@ span.title-right a:hover{
 }
 
 .content h1{font-size:16px; padding-left:25px;}
+
+span.photo_tennis {
+    display: block;
+    background-image: image-url('tennis-photo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+span.photo_football{
+    display: block;
+    background-image: image-url('football-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+span.photo_bowling{
+    display: block;
+    background-image: image-url('bowling-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+span.photo_hockey{
+    display: block;
+    background-image: image-url('hockey-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+span.photo_badminton{
+    display: block;
+    background-image: image-url('badminton-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+span.photo_basketball{
+    display: block;
+    background-image: image-url('basketball-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}
+
+
+span.photo_others{
+    display: block;
+    background-image: image-url('basketball-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    clear: both;
+    padding-top: 66.64%;
+}

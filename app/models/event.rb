@@ -1,5 +1,7 @@
 class Event < ApplicationRecord
   mount_uploader :picture, PictureUploader
+  geocoded_by :event_address
+  after_validation :geocode
 
   has_and_belongs_to_many :users
 
