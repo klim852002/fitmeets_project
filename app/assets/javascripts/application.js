@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require datepicker
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
@@ -24,4 +23,6 @@
 //= require typed.min
 //= require TweenMax.min
 //= require components
+//= require underscore
+//= require gmaps/google
 //= require_tree .

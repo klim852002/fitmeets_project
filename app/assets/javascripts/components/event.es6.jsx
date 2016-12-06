@@ -22,6 +22,7 @@ class Event extends React.Component {
 
           <p className="players-required">{this.props.event.players_req - this.props.eventusers.length} more players required</p>
           <a href={this.props.event.id + "/join"} data-method="post"><button className="draw">Join Event</button></a>
+          <button id="mapBtn" type="button" className="draw" data-toggle="modal" data-target="#eventMap">See Map</button>
       </div>
 
 
