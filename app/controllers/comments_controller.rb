@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to event_path(@event)
     else
-      render 'new'
+      flash[:error] = 'Comment cannot be blank!'
+      redirect_to event_path(@event)
     end
   end
 
