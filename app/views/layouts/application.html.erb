@@ -9,10 +9,9 @@
     </head>
 
     <body>
-
         <%= render "partials/header" %>
 
-      <!-- <p class="navbar-text pull-right">
+        <!-- <p class="navbar-text pull-right">
           <% if user_signed_in? %>
             Logged in as
           <strong><%= current_user.email %></strong>.
@@ -32,21 +31,16 @@
             <p class="alert alert-danger"><%= alert %></p>
           <% end %> -->
 
-            <%= yield %>
+        <%= render 'layouts/messages' %>
+        <%= yield %>
 
-<script type="text/javascript">
-$(".players-list").stick_in_parent();
+        <script type="text/javascript">
+            $('.players-list').stick_in_parent();
 
-$(document).ready(function(){
-  $('.input-group.date').datepicker({
-    autoclose: true,
-    todayHighlight: true,
-    format: 'dd/mm/yyyy'
-  });
-  $('#timepicker1').timepicker();
-  $('#timepicker2').timepicker();
-});
-</script>
+            $('.input-group.date').datepicker({autoclose: true, todayHighlight: true, format: 'dd/mm/yyyy'});
 
-        </body>
-    </html>
+            $('#timepicker1').timepicker();
+            $('#timepicker2').timepicker();
+        </script>
+    </body>
+</html>
