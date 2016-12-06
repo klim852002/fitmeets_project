@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require react
 //= require react_ujs
 //= require react_rails_img
