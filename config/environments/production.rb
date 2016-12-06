@@ -1,8 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  MyApp::Application.configure do
-    config.react.variant = :production
-  end
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
