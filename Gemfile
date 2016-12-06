@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'react-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-timepicker-rails'
 # gem 'devise-bootstrapped', '~> 0.1.1'
 gem 'react-rails-img'
 # Use Puma as the app server

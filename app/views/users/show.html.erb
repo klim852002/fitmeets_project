@@ -1,2 +1,78 @@
+<section class="section-standard">
 
-<p>Email:<%= @user.email %></p>
+  <h1> My <span class="maroon">Profile</span> </h1>
+</section>
+
+<section>
+            <aside>
+                <img src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg" style="max-width:100%;" alt="" class="profile-image">
+                <h1 class="name"><%= @user.email %></h1>
+                  <%=link_to "Edit Profile", edit_user_registration_path, class: "edit-profile-btn" %> <i class="fa fa-pencil-square-o"></i>
+                <ul class="social">
+
+                    <li>
+                        <span>Events Organised</span>
+                        <span class="maroon"><%= @events.count %> </span>
+                    </li>
+                    <li>
+                        <span>Events Joined</span>
+                        <span class="maroon"><%= @events_join.count %></span>
+                    </li>
+                </ul>
+</aside>
+            <div class="content">
+              <div class="title-bar">
+
+                <span class="title-left">Event Organised:</span>
+                <span class="title-right"><a href="/users/<%=current_user.id%>/events">View More</a></span>
+
+               </div>
+                  <% @events.first(8).each do |event| %>
+                    <div class="col-md-3">
+                <article>
+                    <a href="#">
+                        <img src="<%=event.picture%>" alt="" class="thumbnail">
+                    </a>
+                    <div class="post">
+                        <div class="post-about">
+                                <h3><%= event.event_name %></h3>
+                            <a href="/events/<%= event.id %>" class="read-more"><button class="draw">View Event</button></a>
+                        </div>
+                    </div>
+</article>
+</div>
+<% end %>
+
+            </div>
+
+            <hr>
+
+
+            <div class="content">
+              <div class="title-bar">
+
+                <span class="title-left">Event Joined:</span>
+                <span class="title-right"><a href="/users/<%=current_user.id%>/events">View More</a></span>
+
+               </div>
+
+
+                  <% @events_join.first(8).each do |event| %>
+                  <div class="col-md-3">
+                <article>
+                    <a href="#">
+                        <img src="<%=event.picture%>" alt="" class="thumbnail">
+                    </a>
+                    <div class="post">
+                        <div class="post-about">
+                                <h3><%= event.event_name %></h3>
+                            <a href="/events/<%= event.id %>" class="read-more"><button class="draw">View Event</button></a>
+                        </div>
+                    </div>
+</article>
+</div>
+<% end %>
+
+            </div>
+
+        </section>

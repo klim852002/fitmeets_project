@@ -25,7 +25,7 @@
       <!-- <%= f.select(:event_date, options_for_select(2016..2020), {}, {class: "form-control"}) %> -->
       <!-- <%= f.select(:event_date, options_for_select([['Jan', 'Jan'], ['Feb', 'Feb'], ['Mar', ''], ['Apr', 'Apr'], ['May', 'May'], ['Jun', 'Jun'], ['Jul', 'Jul'], ['Aug', 'Aug'], ['Sep', 'Sep'], ['Oct', 'Oct'], ['Nov', 'Nov'], ['Dec', 'Dec']]), {}, {class: "form-control"}) %> -->
       <!-- <%= f.select :event_date, (1..31).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
-      <%= f.text_field :event_date, class: "form-control datepicker" %>
+      <%= f.text_field :event_date, class: "form-control" %>
       <div class="input-group-addon">
         <span class="glyphicon glyphicon-th"></span>
       </div>
@@ -33,20 +33,21 @@
   </div>
   <div class="form-group">
     <%= f.label :'Start Time'%>
-    <div class="form-inline">
+    <div class="form-inline input-group bootstrap-timepicker timepicker">
       <!-- <%= f.select :start_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
       <!-- <%= f.select :start_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
       <!-- <%= f.select :start_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
-      <%= f.time_select :start_time, class: "form-control" %>
+      <%= f.text_field :start_time, class: "form-control input-small", id: "timepicker1" %>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
     </div>
   </div>
   <div class="form-group">
     <%= f.label :'End Time' %>
-    <div class="form-inline">
-      <!-- <%= f.select :end_time, (0..12).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
+    <div class="form-inline input-group bootstrap-timepicker timepicker">
       <!-- <%= f.select :end_time, (0..59).map { |i| "%02d" % i }, {}, {class: "form-control"} %> -->
       <!-- <%= f.select :end_time, options_for_select([['AM', 'AM'], ['PM', 'PM']]), {}, {class: "form-control"} %> -->
-      <%= f.time_select :end_time, class: "form-control" %>
+      <%= f.text_field :end_time, class: "form-control input-small", id: "timepicker2" %>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
     </div>
   </div>
   <div class="form-group">
@@ -60,7 +61,7 @@
   <div class="form-group">
     <%= f.label :'Players Required' %>
     <div class="form-inline">
-      <%= f.number_field :players_req, class: "form-control" %>
+      <%= f.number_field :players_req, min: 2, class: "form-control" %>
     </div>
   </div>
   <div class="form-group">
