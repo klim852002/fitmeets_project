@@ -5,6 +5,9 @@ class UsersController < ApplicationController
       redirect_to new_user_registration_path
     else
       @user = User.find(params[:id])
+      @events = Event.where(creator_id: @user)
+      @events_join = @user.events
+
     end
 
   end

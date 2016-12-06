@@ -24,7 +24,6 @@ var Navbar = React.createClass({
             <li><a href="/aboutus">About Us</a></li>
               <li><a href="/events">Events</a></li>
               <li><a href="/events/new">Create Event</a></li>
-              <li><a href="#">Join Event</a></li>
           </ul>
             { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email} !</li>
                <li className="dropdown">

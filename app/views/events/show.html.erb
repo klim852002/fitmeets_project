@@ -2,27 +2,34 @@
 
 <br/><Br/>
 
-<%= react_component 'Event', {event: @event, eventusers: @eventusers}, {joinpath: join_event_path}  %>
+<%= react_component 'Event', {event: @event, eventusers: @eventusers}, {joinpath: join_event_path} %>
 <!-- equivalent to -->
 <!-- link_to "Join", { controller: "events", action: :join }, method: :post -->
 <hr>
-<div class= "hold-eventform-container">
+
+<div style="clear:both;"></div>
+
+
 
 <%= flash[:notice] %>
 
 
-  <h3><%=@eventusers.length %> players have joined!</h3>
-  <% @eventusers.each do |eventuser| %>
+<div id="scroller-anchor"></div>
+<div class="players-list" id="scroller">
+  <h5><%=@eventusers.length %> players have joined!</h5>
     <ul>
         <li>
+            <% @eventusers.each do |eventuser| %>
             <a href="#"><%=link_to eventuser.name, user_path(eventuser) %></a>
             <!-- <%= eventuser.email %><br>
             <%= eventuser.contact_number %><br> -->
-            <hr>
+              <%end%>
         </li>
     </ul>
-  <%end%>
-</div>
+  </div>
+
+
+
 
 
 <div style='clear:both;'></div>
