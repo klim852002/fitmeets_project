@@ -7,6 +7,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       @events = Event.where(creator_id: @user)
       @events_join = @user.events
+
     end
 
   end

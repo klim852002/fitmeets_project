@@ -885,3 +885,253 @@ section.aboutus-hero {
 section.section-standard.aboutuspage {
     margin-top: 0px;
 }
+
+aside {
+  width: 315px;
+  padding: 29px 30px 0;
+  text-align: center;
+  float: left;
+}
+aside .profile-image {
+  margin-bottom: 27px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+ul.social {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+aside h1 {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+aside .description {
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+aside .link {
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 28px;
+  color: #0000ff;
+  font-weight: 600;
+}
+aside .follow {
+  background-color: #f2f2f2;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  width: 125px;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto 30px;
+}
+aside .follow:hover {
+  text-decoration: underline;
+}
+aside .social li {
+  margin-bottom: 30px;
+}
+aside .social li:before {
+  content: '';
+  background-color: #e6e6e6;
+  width: 65px;
+  height: 1px;
+  margin: 0 auto 28px;
+  display: block;
+}
+aside .social li a {
+  display: block;
+}
+aside .social li a img {
+  display: block;
+  margin: 0 auto;
+}
+aside .social li span {
+  display: block;
+}
+aside .social li span:first-child {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+aside .social li span:nth-child(2) {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.content {
+  border-left: 1px solid #e6e6e6;
+  min-height: 300px;
+  float: left;
+  width: 855px;
+}
+
+.content h1 {
+    font-size: 16px;
+    padding-left: 25px;
+    background: #ececec;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+span.title-left {
+    float: left;
+}
+
+span.title-right {
+    float: right;
+    color: $fitmeets-maroon;
+}
+
+span.title-right a{
+  color: $fitmeets-maroon;
+}
+
+span.title-right a:hover{
+  color:black;
+  text-decoration: none;
+}
+
+.title-bar {
+    background: #ececec;
+    padding: 17px;
+    clear:right;
+    min-height:50px;
+    margin-bottom:20px;
+}
+
+.content article {
+    margin: 0 8px;
+    border-bottom: 1px solid #e6e6e6;
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: -o-calc(100% - 60px);
+    width: calc(100% - 60px);
+    float: left;
+    min-height: 280px;
+}
+
+.content article:last-child {
+  border: none;
+}
+.content article .thumbnail {
+  width: 180px;
+  height: auto;
+  float: left;
+  border:0px;
+}
+.content article .post {
+  margin-left: 0px;
+  float: left;
+  width: 444px;
+}
+.content article .post .info {
+  width: 100%;
+  display: block;
+}
+.content article .post .info .author {
+  float: left;
+}
+.content article .post .info .author img {
+  width: 30px;
+  height: auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+}
+.content article .post .info .author h5 {
+  color: #0000ff;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.content article .post .info .author .time {
+  font-size: 12px;
+  color: #999999;
+  display: block;
+}
+.content article .post .info .author:hover h5 {
+  text-decoration: underline;
+}
+.content article .post .info .numbers {
+  float: right;
+  padding-top: 4px;
+}
+.content article .post .info .numbers a {
+  display: inline-block;
+  color: #999999;
+  text-decoration: none;
+}
+.content article .post .info .numbers a img {
+  float: left;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.content article .post .info .numbers a:not(first-child) {
+  margin-left: 18px;
+}
+.content article .post .info .numbers a:hover {
+  color: #0000ff;
+}
+.content article .post .post-about {
+  float: left;
+  width: 100%;
+  margin-top: 0px;
+}
+.content article .post .post-about h3 {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  display: inline-block;
+  margin-top:0px;
+}
+.content article .post .post-about h3:hover {
+  border-bottom: 2px solid #1a1a1a;
+  margin-bottom: 6px;
+}
+.content article .post .post-about p {
+  font: "Lora", serif;
+  color: #1a1a1a;
+  font-size: 15px;
+  line-height: 24px;
+}
+.content article .post .post-about a {
+  text-decoration: none;
+}
+.content article .post .post-about a.read-more {
+  color: #0000ff;
+  display: block;
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-top: 13px;
+}
+.content article .post .post-about a.read-more:hover {
+  text-decoration: underline;
+}
+.content article > a:hover + .post h3 {
+  border-bottom: 2px solid #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.content h1{font-size:16px; padding-left:25px;}
