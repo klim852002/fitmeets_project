@@ -10,6 +10,11 @@ class EventsController < ApplicationController
     # @event.event_date = @events.event_date.strftime("%d/%m/%Y")
     @eventusers = Event.find(params[:id]).users
     @comments = Comment.where(event_id: @event).order('created_at DESC')
+    @hash = Gmaps4rails.build_markers(@event) do |event, marker|
+      marker.lat event.latitude
+      marker.lng event.longitude
+      marker.infowindow event.event_name
+    end
   end
 
   def new
