@@ -6,6 +6,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'react-rails'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-timepicker-rails'
 # gem 'devise-bootstrapped', '~> 0.1.1'
 gem 'react-rails-img'
 # Use Puma as the app server
@@ -38,12 +40,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'pry'
+gem 'carrierwave'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  # gem 'carrierwave'
 end
 
 group :development do

@@ -7,7 +7,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    # @event.event_date = @events.event_date.strftime("%Y:%m:%d")
+    # @event.event_date = @events.event_date.strftime("%d/%m/%Y")
     @eventusers = Event.find(params[:id]).users
     @comments = Comment.where(event_id: @event).order('created_at DESC')
   end
@@ -66,13 +66,20 @@ class EventsController < ApplicationController
     current_user
     @user = current_user
     @event = Event.find(params[:id])
-    @user.events << @event
-    # debugger
-    JoinMailer.join_event(current_user, @event).deliver
-
-
-    flash[:notice] = 'Event was saved.'
-    redirect_to event_path
+    # if @user.events.includes(:events).where('id') != @event
+    # if Post.includes(:author).where(..)
+    # User.joins(:events).where("@user.events ")
+    # user3.events.where(id: '4')
+    if @user.events.where(id: @event).exists? || @event.users.size >= @event.players_req
+      # debugger
+      flash[:notice] = 'Opps, you cannot join this event now'
+      redirect_to event_path
+    else
+      @user.events << @event
+      JoinMailer.join_event(current_user, @event).deliver
+      flash[:notice] = 'You have joined the event.'
+      redirect_to event_path
+    end
   end
 
   private

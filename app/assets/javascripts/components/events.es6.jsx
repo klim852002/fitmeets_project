@@ -9,7 +9,10 @@ class Events extends React.Component {
         {this.props.events.map(function(event){
           return (
             <div key={event.id} className="paper col-md-3">
-            <img src={event.picture}/>
+
+            <img src={event.picture.url}/>
+
+
             <h2>{event.sports_cat}</h2>
             <h2><span className={event.sports_cat.toLowerCase()}></span></h2>
             <h3><a href={"/events/" + event.id}>{event.event_name}</a></h3>
