@@ -62,8 +62,8 @@ a.standard-btn:hover {
  margin-top:10px;
 }
 
-.volleyball{
-  background: image-url('ic-volleyball.svg');
+.basketball{
+  background: image-url('ic-basketball.svg');
   background-size: 30px 30px;
   display: block;
  text-indent: -9999px;
@@ -75,6 +75,17 @@ a.standard-btn:hover {
 
 .tennis{
   background: image-url('ic-tennis.svg');
+  background-size: 30px 30px;
+  display: block;
+ text-indent: -9999px;
+ width: 30px;
+ height: 30px;
+ margin: 0 auto;
+ margin-top:10px;
+}
+
+.hockey{
+  background: image-url('ic-hockey.png');
   background-size: 30px 30px;
   display: block;
  text-indent: -9999px;

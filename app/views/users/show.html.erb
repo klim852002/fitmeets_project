@@ -30,9 +30,25 @@
                   <% @events.first(8).each do |event| %>
                     <div class="col-md-3">
                 <article>
-                    <a href="#">
-                        <img src="<%=event.picture%>" alt="" class="thumbnail">
-                    </a>
+
+                        <% if event.picture.url %>
+                     <img src="<%=event.picture.url%>" class="thumbnail"/>
+   <% else %>
+        <img class="thumbprofile_<%=event.sports_cat.downcase %> thumbnail"></span>
+<% end %>
+
+<div class="hold-buttons">
+                    <a href="/events/<%=event.id%>/edit/" className="standard-btn-withicon">
+                     Edit <i class="fa fa-pencil-square-o"></i>
+                      </a>
+
+                      <a href="/events/<%=event.id%>" data-method="delete" className="standard-btn-withicon">
+                     Delete <i class="fa fa-trash-o"></i> </a>
+
+
+
+                    </div>
+
                     <div class="post">
                         <div class="post-about">
                                 <h3><%= event.event_name %></h3>
@@ -61,7 +77,11 @@
                   <div class="col-md-3">
                 <article>
                     <a href="#">
-                        <img src="<%=event.picture%>" alt="" class="thumbnail">
+                      <% if event.picture.url %>
+                   <img src="<%=event.picture.url%>" class="thumbnail"/>
+ <% else %>
+      <img class="thumbprofile_<%=event.sports_cat.downcase %> thumbnail"></span>
+<% end %>
                     </a>
                     <div class="post">
                         <div class="post-about">

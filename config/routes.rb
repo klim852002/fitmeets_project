@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # devise_for :users, path: '', path_names: {
-  #   sign_in: 'login',
-  #   sign_out: 'logout',
-  #   sign_up: 'signup'
-  # }
+  devise_for :users, path: '', path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    sign_up: 'signup'
+  }
 
   # devise_for :users, controllers: {
   #   sessions: 'users/sessions'
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   resources :users, :only =>[:show]
   get "/users/:id/events", to: "users#show_user_events", as:"show_user_events"
+
 
 
   post '/events/:id/join', to: 'events#join', as: 'join_event'
