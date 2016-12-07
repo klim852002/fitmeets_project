@@ -4,7 +4,7 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 
-<br/><Br/>
+<br/><br/>
 
 <%= react_component 'Event', {event: @event, eventusers: @eventusers}, {joinpath: join_event_path} %>
 <!-- equivalent to -->
@@ -15,7 +15,7 @@
 
 
 
-<%= flash[:notice] %>
+<!-- <%= flash[:notice] %> -->
 
 <!-- map -->
 <div>
@@ -30,7 +30,7 @@ Longitude is <%=@event.longitude%> -->
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Location</h4>
       </div>
       <div class="modal-body">
         <div>
