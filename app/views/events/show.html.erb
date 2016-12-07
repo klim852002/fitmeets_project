@@ -52,7 +52,8 @@ Longitude is <%=@event.longitude%> -->
 <script type="text/javascript">
 $('#eventMap').on('shown.bs.modal', function(e){
   handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  handler.buildMap({ provider: {region: 'sg'}, internal: {id: 'map'}}, function(){
+
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
