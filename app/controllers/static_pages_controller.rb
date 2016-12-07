@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  # before_action :authenticate_user! only [:about]
 
 def home
 
@@ -11,7 +11,7 @@ end
 
 def aboutus
 
-end  
+end
 
 
 def set_user
