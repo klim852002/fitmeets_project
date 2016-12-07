@@ -5,13 +5,13 @@ class StaticPagesController < ApplicationController
 
 def home
 
-  @events = Event.limit(4)
+  @events = Event.all
 
 end
 
 def aboutus
 
-end  
+end
 
 
 def set_user
