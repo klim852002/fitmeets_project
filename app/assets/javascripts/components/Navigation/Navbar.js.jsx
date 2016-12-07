@@ -1,9 +1,6 @@
 var Navbar = React.createClass({
-
-
   render: function() {
     return (
-
     <nav className="navbar navbar-inverse navbar-fixed-top navbar fitmeets-nav-main">
       <div className="container-fluid">
         <div className="navbar-header">
@@ -25,7 +22,7 @@ var Navbar = React.createClass({
               <li><a href="/events">Events</a></li>
               <li><a href="/events/new">Create Event</a></li>
           </ul>
-            { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.email} !</li>
+            { this.props.current_user ? <ul className="nav navbar-nav fitmeets-nav navbar-right"><li className="welcome-current">Welcome, {this.props.current_user.name}!</li>
                <li className="dropdown">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span className="caret"></span></a>
                         <ul className="dropdown-menu">

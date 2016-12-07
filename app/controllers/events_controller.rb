@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy, :update, :join]
 
   def index
 
@@ -84,7 +85,7 @@ class EventsController < ApplicationController
     # user3.events.where(id: '4')
     if @user.events.where(id: @event).exists? || @event.users.size >= @event.players_req
       # debugger
-      flash[:notice] = 'Opps, you cannot join this event now'
+      flash[:notice] = 'Oops, you have already joined this event.'
       redirect_to event_path
     else
       @user.events << @event
