@@ -1,3 +1,4 @@
+<section class="section-standard">
 <h1> View Events By <span class="maroon">Calendar</span></h1>
 
 <%= month_calendar do |date| %>
@@ -7,9 +8,11 @@
   <% @events.each do |event| %>
     <% if Date.parse(l date) === Date.parse(event.event_date) %>
     <div class="maroon">
-      <%= event.event_name %>
+      <a href="/events/<%= event.id %>"><%= event.event_name %></a>
     </div>
 
   <% end %>
     <% end %>
 <% end %>
+
+</section>

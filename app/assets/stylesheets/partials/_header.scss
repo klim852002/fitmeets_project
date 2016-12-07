@@ -28,6 +28,15 @@ th{border-bottom: 1px solid #DDD;}
     margin: 0 auto;
 }
 
+table.table.table-striped > thead > tr > th:nth-child(odd) {
+    background: maroon;
+    color: #fff;
+}
+
+table.table.table-striped {
+    border-top: 4px solid $fitmeets-maroon;
+}
+
 
 .calendar-heading a {
     padding-left: 10px;
@@ -39,7 +48,7 @@ th{border-bottom: 1px solid #DDD;}
 .calendar-heading {
     margin: 0 auto;
     text-align: center;
-    padding-bottom:20px;
+    padding-bottom:50px;
 }
 
 
@@ -150,7 +159,7 @@ margin-bottom: 10px;
 }
 
 .hold-individual-events-container{
-  max-width: 1024px;
+  max-width: 894px;
 margin: 0 auto;
 }
 
@@ -165,9 +174,9 @@ margin: 0 auto;
   color: $fitmeets-maroon;
 }
 a.navbar-brand img {
-    max-width: 150px;
+    max-width: 200px;
     position: relative;
-    top: 19px;
+    top: -1px;
 }
 
 .section-standard h1{
@@ -869,11 +878,13 @@ i.fa.fa-search {
 }
 
 .players-list {
-    max-width: 200px;
     padding: 10px 20px;
     background: maroon;
     z-index: 3;
     top: 90px !important;
+    width: 11%;
+    min-height: 1000px;
+    position: absolute;
 }
 
 .players-list ul {
@@ -898,12 +909,11 @@ i.fa.fa-search {
     display: block;
 }
 
-.players-list {
-    max-width: 200px;
-    padding: 10px 20px;
-    margin-left: 102px;
-    background: maroon;
-}
+.players-list-hold {
+    max-width: 90px;
+  }
+
+
 
 .section-standard.aboutus{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
@@ -1340,6 +1350,11 @@ padding: 0px !important;
 
 }
 
+.col-md-5.information-eventdetails button.draw {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
 .photofeatured_basketball{
     background-image: image-url('basketball-photo.jpg');
     background-size: cover;
@@ -1378,4 +1393,14 @@ span.photo_others{
     height: 0;
     clear: both;
     padding-top: 66.64%;
+}
+
+.footer{
+  background-color: $fitmeets-maroon;
+  padding: 30px;
+}
+
+.footer p{
+  color:#fff;
+  text-align:center;
 }
