@@ -16,8 +16,8 @@
 
 <div class="hold-comment-buttons">
   <% if current_user == comment.user%>
-  <%= link_to 'Delete comment', [comment.event, comment], method: :delete, :class => 'btn-delete-comment' %>
-  <%= link_to 'Edit comment', edit_event_comment_path(comment.event, comment), :class => 'btn-edit-comment' %>
+  <%= link_to 'Delete', [comment.event, comment], method: :delete, :class => 'btn-delete-comment' %>
+  <%= link_to 'Edit', edit_event_comment_path(comment.event, comment), :class => 'btn-edit-comment' %>
   <% end %>
 </div>
 <% end %>

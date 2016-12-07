@@ -1,9 +1,17 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy, :update, :join]
 
   def index
     # @events = Event.all
     @events = Event.where(["sports_cat LIKE ? or event_name LIKE ? or event_address LIKE ? or details LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
+    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+      marker.lat event.latitude
+      marker.lng event.longitude
+      marker.infowindow event.event_name
+    end
   end
+
+
 
   def show
     @event = Event.find(params[:id])
@@ -84,7 +92,7 @@ class EventsController < ApplicationController
     # user3.events.where(id: '4')
     if @user.events.where(id: @event).exists? || @event.users.size >= @event.players_req
       # debugger
-      flash[:notice] = 'Opps, you cannot join this event now'
+      flash[:notice] = 'Oops, you have already joined this event.'
       redirect_to event_path
     else
       @user.events << @event

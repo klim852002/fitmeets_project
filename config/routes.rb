@@ -24,8 +24,8 @@ Rails.application.routes.draw do
 
   post '/events/:id/join', to: 'events#join', as: 'join_event'
 
-  root 'static_pages#home'
-
   get '/aboutus', to: 'static_pages#aboutus'
+
+  root 'static_pages#home'
 
 end
