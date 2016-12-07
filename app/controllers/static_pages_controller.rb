@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 
 def home
 
-  @events = Event.all
+  @events = Event.limit(4)
 
 end
 
