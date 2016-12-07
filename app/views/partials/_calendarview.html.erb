@@ -1,13 +1,15 @@
-<h1> hello calendar here </h1>
+<h1> View Events By <span class="maroon">Calendar</span></h1>
 
 <%= month_calendar do |date| %>
-  <%= date %>
+  <%= l date.to_date, format: :customformat %>
+
 
   <% @events.each do |event| %>
-    <div>
+    <% if Date.parse(l date) === Date.parse(event.event_date) %>
+    <div class="maroon">
       <%= event.event_name %>
-        <%= event.event_date %>
     </div>
 
   <% end %>
+    <% end %>
 <% end %>

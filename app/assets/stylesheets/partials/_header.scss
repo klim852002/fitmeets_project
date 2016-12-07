@@ -23,6 +23,24 @@ table,td,th {vertical-align:middle; border:none;}
 
 th{border-bottom: 1px solid #DDD;}
 
+.simple-calendar {
+    max-width: 834px;
+    margin: 0 auto;
+}
+
+
+.calendar-heading a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $fitmeets-maroon;
+
+}
+
+.calendar-heading {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:20px;
+}
 
 
 i.icon-chevron-up:before {
@@ -1188,6 +1206,10 @@ span.title-right a:hover{
 
 .content h1{font-size:16px; padding-left:25px;}
 
+.photofeatured_tennis{
+    background-image: image-url('tennis-photo.jpeg');
+}
+
 span.photo_tennis {
     display: block;
     background-image: image-url('tennis-photo.jpeg');
@@ -1209,9 +1231,15 @@ padding: 0px !important;
 
 }
 
+.photofeatured_football{
+    background-image: image-url('football-photo.jpeg');
+    background-size: cover;
+min-height: 350px;
+}
+
 span.photo_football{
     display: block;
-    background-image: image-url('football-photo.jpg');
+    background-image: image-url('football-photo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -1241,6 +1269,12 @@ span.photo_bowling{
     padding-top: 66.64%;
 }
 
+.photofeatured_bowling{
+    background-image: image-url('bowling-photo.jpg');
+    background-size: cover;
+min-height: 350px;
+}
+
 .thumbprofile_bowling{
   background-image: image-url('bowling-photo.jpeg');
   background-size: cover;
@@ -1249,6 +1283,12 @@ height: 120px !important;
 border-radius: 0px !important;
 padding: 0px !important;
 
+}
+
+.photofeatured_hockey{
+    background-image: image-url('hockey-photo.jpg');
+    background-size: cover;
+min-height: 350px;
 }
 
 span.photo_hockey{
@@ -1272,6 +1312,13 @@ padding: 0px !important;
 
 }
 
+
+.photofeatured_badminton{
+    background-image: image-url('badminton-photo.jpg');
+    background-size: cover;
+min-height: 350px;
+}
+
 span.photo_badminton{
     display: block;
     background-image: image-url('badminton-photo.jpg');
@@ -1284,7 +1331,7 @@ span.photo_badminton{
 }
 
 .thumbprofile_badminton{
-  background-image: image-url('badminton-photo.jpeg');
+  background-image: image-url('badminton-photo.jpg');
   background-size: cover;
 display: block;
 height: 120px !important;
@@ -1292,6 +1339,13 @@ border-radius: 0px !important;
 padding: 0px !important;
 
 }
+
+.photofeatured_basketball{
+    background-image: image-url('basketball-photo.jpg');
+    background-size: cover;
+min-height: 350px;
+}
+
 
 span.photo_basketball{
     display: block;
