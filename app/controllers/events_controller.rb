@@ -4,7 +4,14 @@ class EventsController < ApplicationController
   def index
     # @events = Event.all
     @events = Event.where(["sports_cat LIKE ? or event_name LIKE ? or event_address LIKE ? or details LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
+    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+      marker.lat event.latitude
+      marker.lng event.longitude
+      marker.infowindow event.event_name
+    end
   end
+
+
 
   def show
     @event = Event.find(params[:id])
