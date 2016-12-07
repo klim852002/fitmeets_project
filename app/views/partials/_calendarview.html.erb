@@ -1,0 +1,15 @@
+<h1> View Events By <span class="maroon">Calendar</span></h1>
+
+<%= month_calendar do |date| %>
+  <%= l date.to_date, format: :customformat %>
+
+
+  <% @events.each do |event| %>
+    <% if Date.parse(l date) === Date.parse(event.event_date) %>
+    <div class="maroon">
+      <%= event.event_name %>
+    </div>
+
+  <% end %>
+    <% end %>
+<% end %>

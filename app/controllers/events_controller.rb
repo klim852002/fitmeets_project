@@ -11,6 +11,8 @@ class EventsController < ApplicationController
     end
   end
 
+
+
   def show
     @event = Event.find(params[:id])
     # @event.event_date = @events.event_date.strftime("%d/%m/%Y")
