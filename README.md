@@ -1,24 +1,18 @@
-# README
+FitMeets
+========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to FitMeets!
+A sleek and easy meetup platform for sporty people by FitMeets (@leeadrian841, @HuddyHuda, @klim852002, @Fauziku2)
 
-Things you may want to cover:
 
-* Ruby version
+User Story
+==========
 
-* System dependencies
+Imagine you are the sporty type and needs people to accompany you. And you need a really sleek platform to do that.
+This is FitMeets, a platform that can be used to organise meetups for sports.
+You can create events and join them at ease!
 
-* Configuration
 
-* Database creation
+[Website](https://project4-fitmeets.herokuapp.com/)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Credits to WDI6

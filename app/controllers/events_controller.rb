@@ -68,8 +68,15 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    current_user
     @event = Event.find(params[:id])
+    # @user = User.find(params[:id])
+    @eventusers = @event.users
+
+    CancelMailer.cancel_event(@eventusers, @event).deliver
+
     @event.destroy
+
     respond_to do |format|
       format.html { redirect_to events_path, notice: 'You have successfully deleted your event' }
       format.json { head :no_content }
