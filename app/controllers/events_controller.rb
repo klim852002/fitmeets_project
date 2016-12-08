@@ -5,9 +5,10 @@ class EventsController < ApplicationController
     # @events = Event.all
     @events = Event.where(["sports_cat LIKE ? or event_name LIKE ? or event_address LIKE ? or details LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+      event_path = view_context.link_to event.event_name, event_path(event)
       marker.lat event.latitude
       marker.lng event.longitude
-      marker.infowindow event.event_name
+      marker.infowindow "<b>#{event_path}</b>"
     end
   end
 
