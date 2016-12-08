@@ -3,11 +3,16 @@ class EventsController < ApplicationController
 
   def index
     # @events = Event.all
+    # settings for dev mode
     @events = Event.where(["sports_cat LIKE ? or event_name LIKE ? or event_address LIKE ? or details LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
+    # # Settings for production mode
+    # @events = Event.where(["sports_cat ILIKE ? or event_name ILIKE ? or event_address ILIKE ? or details ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
+
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+      event_path = view_context.link_to event.event_name, event_path(event)
       marker.lat event.latitude
       marker.lng event.longitude
-      marker.infowindow event.event_name
+      marker.infowindow "<b>#{event_path}</b>"
     end
   end
 
@@ -67,8 +72,15 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    current_user
     @event = Event.find(params[:id])
+    # @user = User.find(params[:id])
+    @eventusers = @event.users
+
+    CancelMailer.cancel_event(@eventusers, @event).deliver
+
     @event.destroy
+
     respond_to do |format|
       format.html { redirect_to events_path, notice: 'You have successfully deleted your event' }
       format.json { head :no_content }
