@@ -1,8 +1,24 @@
 class Events extends React.Component {
 
 
-
   render () {
+
+// let numItems = $('.paper')
+//     let counter = 0;
+//     let clearBoth;
+//   if (numItems.count % 3){
+//     console.log('hello')
+//     clearBoth = (
+//     <div style={{clear:'both'}}></div>
+//     )
+//   } else {
+//     clearBoth = (
+//       <h2>Hey man! Sign in to see this section</h2>
+//     )
+//   }
+
+
+
     // debugger;
     return (
       <div className="hold-events container">
@@ -10,6 +26,7 @@ class Events extends React.Component {
         {this.props.events.map(function(event){
           return (
             <div key={event.id} className="paper col-md-4">
+            
               <div className="box">
 
             {event.picture.url ?  <img src={event.picture.url}/> : <span className={`photo_${event.sports_cat.toLowerCase()}`}></span>}

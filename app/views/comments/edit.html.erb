@@ -1,7 +1,11 @@
-<h1>edit page</h1>
+<section class="section-standard">
+
+  <h1> Edit Comment </h1>
 
 <%= form_for ([@event, @comment]) do |f| %>
   <%= f.text_area :message %>
-  <%= f.submit %>
+  <%= f.submit 'Update', :class => 'comment-submit' %>
 
 <% end %>
+
+</section>
