@@ -15,7 +15,7 @@ class FeaturedEvents extends React.Component {
               <div className="info">
                 <div className="title">{event.event_name}</div>
                 <div className="hold">
-                <div className="date">APRIL 3, 2015</div>
+                <div className="date">{event.event_date}</div>
                 <div className="address">{event.event_address}</div>
               </div>
               </div>
