@@ -14,7 +14,7 @@ class JoinMailer < ActionMailer::Base
 
     mail( to: user.email,
           from: "fitmeets@gmail.com",
-          subject: "You have joined a sporting event on FitMeets"
+          subject: "You have joined a sports event on FitMeets"
         )
   end
 end

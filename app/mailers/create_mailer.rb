@@ -6,7 +6,7 @@ class CreateMailer < ActionMailer::Base
 
     mail( to: user.email,
           from: "fitmeeets@gmail.com",
-          subject: "Sporting Event created with FitMeets"
+          subject: "Sports Event created with FitMeets"
         )
   end
 end
