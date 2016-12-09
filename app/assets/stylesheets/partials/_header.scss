@@ -747,9 +747,13 @@ p.players-required {
 background: black;
 }
 
-.hold-eventform-container{
-  max-width:1024px;
-  margin: 0 auto;
+.hold-eventform-container {
+    max-width: 1024px;
+    margin-left: 290px;
+}
+
+.hold-eventform-container p {
+    text-align: left !important;
 }
 
 .search-wrapper {

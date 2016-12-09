@@ -6,7 +6,7 @@
   <%= l date.to_date, format: :customformat %>
 
 
-  <% @events.each do |event| %>
+  <% @events_calendar.each do |event| %>
     <% if Date.parse(l date) === Date.parse(event.event_date) %>
     <div class="maroon">
       <a href="/events/<%= event.id %>"><%= event.event_name %></a>

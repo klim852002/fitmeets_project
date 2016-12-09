@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
 def home
 
   @events = Event.limit(4)
+  @events_calendar = Event.all
 
 end
 
